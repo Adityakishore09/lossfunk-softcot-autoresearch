@@ -1,0 +1,300 @@
+{
+  "condition_summary": {
+    "asdiv-aug/baseline": {
+      "accuracy": {
+        "count": 3,
+        "maximum": 0.885,
+        "mean": 0.8683333333333333,
+        "minimum": 0.84,
+        "sample_std": 0.02466441431158126
+      },
+      "mean_generation_latency_seconds": {
+        "count": 3,
+        "maximum": 7.713357439364772,
+        "mean": 5.020103545252544,
+        "minimum": 3.655244132806547,
+        "sample_std": 2.332497551211406
+      },
+      "sample_sizes": {
+        "41": 200,
+        "42": 200,
+        "43": 200
+      },
+      "seeds": [
+        "41",
+        "42",
+        "43"
+      ]
+    },
+    "asdiv-aug/learned": {
+      "accuracy": {
+        "count": 3,
+        "maximum": 0.885,
+        "mean": 0.8566666666666666,
+        "minimum": 0.835,
+        "sample_std": 0.025658007197234444
+      },
+      "mean_generation_latency_seconds": {
+        "count": 3,
+        "maximum": 10.083529275318142,
+        "mean": 6.263341595612,
+        "minimum": 4.26947412549518,
+        "sample_std": 3.3094400511659843
+      },
+      "sample_sizes": {
+        "41": 200,
+        "42": 200,
+        "43": 200
+      },
+      "seeds": [
+        "41",
+        "42",
+        "43"
+      ]
+    },
+    "asdiv-aug/zero": {
+      "accuracy": {
+        "count": 3,
+        "maximum": 0.815,
+        "mean": 0.7949999999999999,
+        "minimum": 0.77,
+        "sample_std": 0.022912878474779172
+      },
+      "mean_generation_latency_seconds": {
+        "count": 3,
+        "maximum": 8.49450942531228,
+        "mean": 5.601123349434541,
+        "minimum": 3.9951420014654286,
+        "sample_std": 2.510803656954219
+      },
+      "sample_sizes": {
+        "41": 200,
+        "42": 200,
+        "43": 200
+      },
+      "seeds": [
+        "41",
+        "42",
+        "43"
+      ]
+    },
+    "gsm8k/baseline": {
+      "accuracy": {
+        "count": 3,
+        "maximum": 0.88,
+        "mean": 0.8683333333333333,
+        "minimum": 0.855,
+        "sample_std": 0.012583057392117927
+      },
+      "mean_generation_latency_seconds": {
+        "count": 3,
+        "maximum": 15.662871554663871,
+        "mean": 9.945205464696047,
+        "minimum": 7.086080084610731,
+        "sample_std": 4.951644092898416
+      },
+      "sample_sizes": {
+        "41": 200,
+        "42": 200,
+        "43": 200
+      },
+      "seeds": [
+        "41",
+        "42",
+        "43"
+      ]
+    },
+    "gsm8k/learned": {
+      "accuracy": {
+        "count": 3,
+        "maximum": 0.88,
+        "mean": 0.8250000000000001,
+        "minimum": 0.76,
+        "sample_std": 0.0606217782649107
+      },
+      "mean_generation_latency_seconds": {
+        "count": 3,
+        "maximum": 16.146693558623085,
+        "mean": 10.731810085712931,
+        "minimum": 7.776246936982497,
+        "sample_std": 4.695986212088591
+      },
+      "sample_sizes": {
+        "41": 200,
+        "42": 200,
+        "43": 200
+      },
+      "seeds": [
+        "41",
+        "42",
+        "43"
+      ]
+    },
+    "gsm8k/zero": {
+      "accuracy": {
+        "count": 3,
+        "maximum": 0.805,
+        "mean": 0.795,
+        "minimum": 0.775,
+        "sample_std": 0.017320508075688787
+      },
+      "mean_generation_latency_seconds": {
+        "count": 3,
+        "maximum": 16.304169518435373,
+        "mean": 10.466230522304928,
+        "minimum": 7.450844286184292,
+        "sample_std": 5.056722750881509
+      },
+      "sample_sizes": {
+        "41": 200,
+        "42": 200,
+        "43": 200
+      },
+      "seeds": [
+        "41",
+        "42",
+        "43"
+      ]
+    },
+    "strategyqa/baseline": {
+      "accuracy": {
+        "count": 3,
+        "maximum": 0.565,
+        "mean": 0.5366666666666666,
+        "minimum": 0.515,
+        "sample_std": 0.02565800719723438
+      },
+      "mean_generation_latency_seconds": {
+        "count": 3,
+        "maximum": 3.983666305199731,
+        "mean": 2.9438893606940595,
+        "minimum": 2.4176686221337875,
+        "sample_std": 0.9004955126710801
+      },
+      "sample_sizes": {
+        "41": 200,
+        "42": 200,
+        "43": 200
+      },
+      "seeds": [
+        "41",
+        "42",
+        "43"
+      ]
+    },
+    "strategyqa/learned": {
+      "accuracy": {
+        "count": 3,
+        "maximum": 0.665,
+        "mean": 0.6516666666666667,
+        "minimum": 0.635,
+        "sample_std": 0.01527525231651948
+      },
+      "mean_generation_latency_seconds": {
+        "count": 3,
+        "maximum": 12.815157870566473,
+        "mean": 7.205768440863273,
+        "minimum": 3.1305315733677705,
+        "sample_std": 5.021276201544235
+      },
+      "sample_sizes": {
+        "41": 200,
+        "42": 200,
+        "43": 200
+      },
+      "seeds": [
+        "41",
+        "42",
+        "43"
+      ]
+    },
+    "strategyqa/zero": {
+      "accuracy": {
+        "count": 3,
+        "maximum": 0.605,
+        "mean": 0.5866666666666666,
+        "minimum": 0.565,
+        "sample_std": 0.020207259421636918
+      },
+      "mean_generation_latency_seconds": {
+        "count": 3,
+        "maximum": 6.662511616719421,
+        "mean": 4.870741999493135,
+        "minimum": 3.3461384108685888,
+        "sample_std": 1.6742508997311154
+      },
+      "sample_sizes": {
+        "41": 200,
+        "42": 200,
+        "43": 200
+      },
+      "seeds": [
+        "41",
+        "42",
+        "43"
+      ]
+    }
+  },
+  "interpretation_guardrail": "The difference-of-differences is a preliminary implementation-specific pattern, not proof that soft thoughts are general reasoning states.",
+  "source_files": [
+    "results/raw/seed_41/asdiv-aug_baseline.json",
+    "results/raw/seed_41/asdiv-aug_learned.json",
+    "results/raw/seed_41/asdiv-aug_zero.json",
+    "results/raw/seed_41/gsm8k_baseline.json",
+    "results/raw/seed_41/gsm8k_learned.json",
+    "results/raw/seed_41/gsm8k_zero.json",
+    "results/raw/seed_41/strategyqa_baseline.json",
+    "results/raw/seed_41/strategyqa_learned.json",
+    "results/raw/seed_41/strategyqa_zero.json",
+    "results/raw/seed_42/asdiv-aug_baseline.json",
+    "results/raw/seed_42/asdiv-aug_learned.json",
+    "results/raw/seed_42/asdiv-aug_zero.json",
+    "results/raw/seed_42/gsm8k_baseline.json",
+    "results/raw/seed_42/gsm8k_learned.json",
+    "results/raw/seed_42/gsm8k_zero.json",
+    "results/raw/seed_42/strategyqa_baseline.json",
+    "results/raw/seed_42/strategyqa_learned.json",
+    "results/raw/seed_42/strategyqa_zero.json",
+    "results/raw/seed_43/asdiv-aug_baseline.json",
+    "results/raw/seed_43/asdiv-aug_learned.json",
+    "results/raw/seed_43/asdiv-aug_zero.json",
+    "results/raw/seed_43/gsm8k_baseline.json",
+    "results/raw/seed_43/gsm8k_learned.json",
+    "results/raw/seed_43/gsm8k_zero.json",
+    "results/raw/seed_43/strategyqa_baseline.json",
+    "results/raw/seed_43/strategyqa_learned.json",
+    "results/raw/seed_43/strategyqa_zero.json"
+  ],
+  "transfer_contrasts": {
+    "learned_vs_baseline": {
+      "difference_of_differences": {
+        "bootstrap_draws": 10000,
+        "bootstrap_mean_ci95_high": -0.10499999999999998,
+        "bootstrap_mean_ci95_low": -0.14000000000000012,
+        "bootstrap_seed": 20260622,
+        "count": 3,
+        "maximum": -0.10499999999999998,
+        "mean": -0.1266666666666667,
+        "minimum": -0.14000000000000012,
+        "sample_std": 0.01892969448600097
+      },
+      "per_seed": {
+        "41": {
+          "difference_of_differences": -0.135,
+          "related_delta_accuracy": -0.030000000000000027,
+          "unrelated_delta_accuracy": 0.10499999999999998
+        },
+        "42": {
+          "difference_of_differences": -0.14000000000000012,
+          "related_delta_accuracy": -0.050000000000000044,
+          "unrelated_delta_accuracy": 0.09000000000000008
+        },
+        "43": {
+          "difference_of_differences": -0.10499999999999998,
+          "related_delta_accuracy": 0.04500000000000004,
+          "unrelated_delta_accuracy": 0.15000000000000002
+        }
+      }
+    }
+  }
+}

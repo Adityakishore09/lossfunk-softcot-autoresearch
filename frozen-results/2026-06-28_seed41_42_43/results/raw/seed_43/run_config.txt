@@ -1,0 +1,7 @@
+seed=43
+batch_size=1
+min_gpu_free_mib=30000
+min_gpu_free_mib_source=override
+gpu_utilization_before_percent=92
+gpu_memory_free_before_mib=30850
+gpu_contention=contended

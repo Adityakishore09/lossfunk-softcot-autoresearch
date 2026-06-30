@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+Thumbs.db
+
+# Keep generated artifacts and raw result logs because Lossfunk wants the AI artifact.
+# Do not ignore paper PDFs, rendered pages, frozen archives, logs, or results.

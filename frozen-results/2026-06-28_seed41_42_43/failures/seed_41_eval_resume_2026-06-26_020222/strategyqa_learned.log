@@ -1,0 +1,29 @@
+/data2/anaconda3/envs/softcot/lib/python3.13/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/data2/anaconda3/envs/softcot/lib/python3.13/site-packages/fastNLP/core/utils.py:27: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import parse_version
+Args: {'base_model_id': '/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/models/Qwen2.5-7B-Instruct', 'assistant_model_id': '/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/models/Qwen2.5-1.5B-Instruct', 'params_file_name': '/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/ckpt/gsm8k-source-seed-41-gsm8k-10.0-32-Qwen2.5-7B-Instruct-Qwen2.5-1.5B-Instruct/projection.bin', 'base_model_ckpt': None, 'assistant_model_ckpt': None, 'num_thought_tokens': 4, 'num_return_sequences': 1, 'task_name': 'strategyqa', 'print_input': False, 'print_response': False, 'test_k': 0, 'test_file': '/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/data/fixed/strategyqa_target_dev.jsonl', 'seed': 41, 'soft_thought_control': 'learned', 'max_new_tokens': 512, 'results_file': '/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/results/raw/seed_41/strategyqa_learned.json', 'tune_base_model': False, 'tune_assistant_model': False}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.12it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.09it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.11it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.19it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.16it/s]
+Load weights from file `/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/ckpt/gsm8k-source-seed-41-gsm8k-10.0-32-Qwen2.5-7B-Instruct-Qwen2.5-1.5B-Instruct/projection.bin` for projection module.
+Successfully Init Model `EfficientSoftCoTFromSmallModel`
+Traceback (most recent call last):
+  File "/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/evaluate_softcot.py", line 131, in <module>
+    db = StrategyQALoader(train_split=0.0).load({'test': test_file}) if test_file else StrategyQALoader().load()
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/data_loader.py", line 112, in load
+    return DataBundle(datasets={k: self._load(v, is_train=('train' in [k])) for k, v in paths.items()})
+                                   ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/data_loader.py", line 94, in _load
+    dataset = json.load(file)
+  File "/data2/anaconda3/envs/softcot/lib/python3.13/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/data2/anaconda3/envs/softcot/lib/python3.13/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/data2/anaconda3/envs/softcot/lib/python3.13/json/decoder.py", line 348, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 1024)

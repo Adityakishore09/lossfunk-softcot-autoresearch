@@ -1,0 +1,1210 @@
+/data2/anaconda3/envs/softcot/lib/python3.13/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/data2/anaconda3/envs/softcot/lib/python3.13/site-packages/fastNLP/core/utils.py:27: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import parse_version
+Args: {'base_model_id': '/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/models/Qwen2.5-7B-Instruct', 'assistant_model_id': '/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/models/Qwen2.5-1.5B-Instruct', 'params_file_name': 'None', 'base_model_ckpt': None, 'assistant_model_ckpt': None, 'num_thought_tokens': 0, 'num_return_sequences': 1, 'task_name': 'strategyqa', 'print_input': False, 'print_response': False, 'test_k': 0, 'test_file': '/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/data/fixed/strategyqa_target_dev.jsonl', 'seed': 43, 'soft_thought_control': 'learned', 'max_new_tokens': 512, 'results_file': '/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/results/raw/seed_43/strategyqa_baseline.json', 'tune_base_model': False, 'tune_assistant_model': False}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.31it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.26it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.28it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.34it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.32it/s]
+Successfully Init Model `EfficientSoftCoTFromSmallModel`
+  0%|          | 0/200 [00:00<?, ?it/s]                                       Ground Truth Answer: True
+  0%|          | 0/200 [00:00<?, ?it/s]                                       Ground Truth Answer: True
+  0%|          | 0/200 [00:03<?, ?it/s]                                       Model Answer: False
+  0%|          | 0/200 [00:03<?, ?it/s]                                       Is Correct: False
+  0%|          | 0/200 [00:03<?, ?it/s]                                       Correct Count: 0/1
+  0%|          | 0/200 [00:03<?, ?it/s]                                       --------------------
+  0%|          | 0/200 [00:03<?, ?it/s]  0%|          | 1/200 [00:03<10:45,  3.24s/it]                                               Ground Truth Answer: False
+  0%|          | 1/200 [00:03<10:45,  3.24s/it]                                               Ground Truth Answer: False
+  0%|          | 1/200 [00:05<10:45,  3.24s/it]                                               Model Answer: False
+  0%|          | 1/200 [00:05<10:45,  3.24s/it]                                               Is Correct: True
+  0%|          | 1/200 [00:05<10:45,  3.24s/it]                                               Correct Count: 1/2
+  0%|          | 1/200 [00:05<10:45,  3.24s/it]                                               --------------------
+  0%|          | 1/200 [00:05<10:45,  3.24s/it]  1%|          | 2/200 [00:05<09:04,  2.75s/it]                                               Ground Truth Answer: True
+  1%|          | 2/200 [00:05<09:04,  2.75s/it]                                               Ground Truth Answer: True
+  1%|          | 2/200 [00:05<09:04,  2.75s/it]                                               Model Answer: True
+  1%|          | 2/200 [00:05<09:04,  2.75s/it]                                               Is Correct: True
+  1%|          | 2/200 [00:05<09:04,  2.75s/it]                                               Correct Count: 2/3
+  1%|          | 2/200 [00:05<09:04,  2.75s/it]                                               --------------------
+  1%|          | 2/200 [00:05<09:04,  2.75s/it]  2%|▏         | 3/200 [00:05<05:18,  1.62s/it]                                               Ground Truth Answer: False
+  2%|▏         | 3/200 [00:05<05:18,  1.62s/it]                                               Ground Truth Answer: False
+  2%|▏         | 3/200 [00:13<05:18,  1.62s/it]                                               Model Answer: False
+  2%|▏         | 3/200 [00:13<05:18,  1.62s/it]                                               Is Correct: True
+  2%|▏         | 3/200 [00:13<05:18,  1.62s/it]                                               Correct Count: 3/4
+  2%|▏         | 3/200 [00:13<05:18,  1.62s/it]                                               --------------------
+  2%|▏         | 3/200 [00:13<05:18,  1.62s/it]  2%|▏         | 4/200 [00:13<13:31,  4.14s/it]                                               Ground Truth Answer: False
+  2%|▏         | 4/200 [00:13<13:31,  4.14s/it]                                               Ground Truth Answer: False
+  2%|▏         | 4/200 [00:14<13:31,  4.14s/it]                                               Model Answer: None
+  2%|▏         | 4/200 [00:14<13:31,  4.14s/it]                                               Is Correct: False
+  2%|▏         | 4/200 [00:14<13:31,  4.14s/it]                                               Correct Count: 3/5
+  2%|▏         | 4/200 [00:14<13:31,  4.14s/it]                                               --------------------
+  2%|▏         | 4/200 [00:14<13:31,  4.14s/it]  2%|▎         | 5/200 [00:14<08:48,  2.71s/it]                                               Ground Truth Answer: False
+  2%|▎         | 5/200 [00:14<08:48,  2.71s/it]                                               Ground Truth Answer: False
+  2%|▎         | 5/200 [00:15<08:48,  2.71s/it]                                               Model Answer: None
+  2%|▎         | 5/200 [00:15<08:48,  2.71s/it]                                               Is Correct: False
+  2%|▎         | 5/200 [00:15<08:48,  2.71s/it]                                               Correct Count: 3/6
+  2%|▎         | 5/200 [00:15<08:48,  2.71s/it]                                               --------------------
+  2%|▎         | 5/200 [00:15<08:48,  2.71s/it]  3%|▎         | 6/200 [00:15<06:50,  2.11s/it]                                               Ground Truth Answer: True
+  3%|▎         | 6/200 [00:15<06:50,  2.11s/it]                                               Ground Truth Answer: True
+  3%|▎         | 6/200 [00:23<06:50,  2.11s/it]                                               Model Answer: False
+  3%|▎         | 6/200 [00:23<06:50,  2.11s/it]                                               Is Correct: False
+  3%|▎         | 6/200 [00:23<06:50,  2.11s/it]                                               Correct Count: 3/7
+  3%|▎         | 6/200 [00:23<06:50,  2.11s/it]                                               --------------------
+  3%|▎         | 6/200 [00:23<06:50,  2.11s/it]  4%|▎         | 7/200 [00:23<13:34,  4.22s/it]                                               Ground Truth Answer: True
+  4%|▎         | 7/200 [00:23<13:34,  4.22s/it]                                               Ground Truth Answer: True
+  4%|▎         | 7/200 [00:31<13:34,  4.22s/it]                                               Model Answer: False
+  4%|▎         | 7/200 [00:31<13:34,  4.22s/it]                                               Is Correct: False
+  4%|▎         | 7/200 [00:31<13:34,  4.22s/it]                                               Correct Count: 3/8
+  4%|▎         | 7/200 [00:31<13:34,  4.22s/it]                                               --------------------
+  4%|▎         | 7/200 [00:31<13:34,  4.22s/it]  4%|▍         | 8/200 [00:31<17:31,  5.47s/it]                                               Ground Truth Answer: False
+  4%|▍         | 8/200 [00:31<17:31,  5.47s/it]                                               Ground Truth Answer: False
+  4%|▍         | 8/200 [00:34<17:31,  5.47s/it]                                               Model Answer: False
+  4%|▍         | 8/200 [00:34<17:31,  5.47s/it]                                               Is Correct: True
+  4%|▍         | 8/200 [00:34<17:31,  5.47s/it]                                               Correct Count: 4/9
+  4%|▍         | 8/200 [00:34<17:31,  5.47s/it]                                               --------------------
+  4%|▍         | 8/200 [00:34<17:31,  5.47s/it]  4%|▍         | 9/200 [00:34<14:32,  4.57s/it]                                               Ground Truth Answer: False
+  4%|▍         | 9/200 [00:34<14:32,  4.57s/it]                                               Ground Truth Answer: False
+  4%|▍         | 9/200 [00:34<14:32,  4.57s/it]                                               Model Answer: False
+  4%|▍         | 9/200 [00:34<14:32,  4.57s/it]                                               Is Correct: True
+  4%|▍         | 9/200 [00:34<14:32,  4.57s/it]                                               Correct Count: 5/10
+  4%|▍         | 9/200 [00:34<14:32,  4.57s/it]                                               --------------------
+  4%|▍         | 9/200 [00:34<14:32,  4.57s/it]  5%|▌         | 10/200 [00:34<10:11,  3.22s/it]                                                Ground Truth Answer: False
+  5%|▌         | 10/200 [00:34<10:11,  3.22s/it]                                                Ground Truth Answer: False
+  5%|▌         | 10/200 [00:34<10:11,  3.22s/it]                                                Model Answer: False
+  5%|▌         | 10/200 [00:34<10:11,  3.22s/it]                                                Is Correct: True
+  5%|▌         | 10/200 [00:34<10:11,  3.22s/it]                                                Correct Count: 6/11
+  5%|▌         | 10/200 [00:34<10:11,  3.22s/it]                                                --------------------
+  5%|▌         | 10/200 [00:34<10:11,  3.22s/it]  6%|▌         | 11/200 [00:34<07:11,  2.28s/it]                                                Ground Truth Answer: False
+  6%|▌         | 11/200 [00:34<07:11,  2.28s/it]                                                Ground Truth Answer: False
+  6%|▌         | 11/200 [00:36<07:11,  2.28s/it]                                                Model Answer: False
+  6%|▌         | 11/200 [00:36<07:11,  2.28s/it]                                                Is Correct: True
+  6%|▌         | 11/200 [00:36<07:11,  2.28s/it]                                                Correct Count: 7/12
+  6%|▌         | 11/200 [00:36<07:11,  2.28s/it]                                                --------------------
+  6%|▌         | 11/200 [00:36<07:11,  2.28s/it]  6%|▌         | 12/200 [00:36<06:54,  2.21s/it]                                                Ground Truth Answer: False
+  6%|▌         | 12/200 [00:36<06:54,  2.21s/it]                                                Ground Truth Answer: False
+  6%|▌         | 12/200 [00:36<06:54,  2.21s/it]                                                Model Answer: None
+  6%|▌         | 12/200 [00:36<06:54,  2.21s/it]                                                Is Correct: False
+  6%|▌         | 12/200 [00:36<06:54,  2.21s/it]                                                Correct Count: 7/13
+  6%|▌         | 12/200 [00:36<06:54,  2.21s/it]                                                --------------------
+  6%|▌         | 12/200 [00:36<06:54,  2.21s/it]  6%|▋         | 13/200 [00:36<04:57,  1.59s/it]                                                Ground Truth Answer: False
+  6%|▋         | 13/200 [00:36<04:57,  1.59s/it]                                                Ground Truth Answer: False
+  6%|▋         | 13/200 [00:37<04:57,  1.59s/it]                                                Model Answer: None
+  6%|▋         | 13/200 [00:37<04:57,  1.59s/it]                                                Is Correct: False
+  6%|▋         | 13/200 [00:37<04:57,  1.59s/it]                                                Correct Count: 7/14
+  6%|▋         | 13/200 [00:37<04:57,  1.59s/it]                                                --------------------
+  6%|▋         | 13/200 [00:37<04:57,  1.59s/it]  7%|▋         | 14/200 [00:37<04:00,  1.29s/it]                                                Ground Truth Answer: True
+  7%|▋         | 14/200 [00:37<04:00,  1.29s/it]                                                Ground Truth Answer: True
+  7%|▋         | 14/200 [00:40<04:00,  1.29s/it]                                                Model Answer: False
+  7%|▋         | 14/200 [00:40<04:00,  1.29s/it]                                                Is Correct: False
+  7%|▋         | 14/200 [00:40<04:00,  1.29s/it]                                                Correct Count: 7/15
+  7%|▋         | 14/200 [00:40<04:00,  1.29s/it]                                                --------------------
+  7%|▋         | 14/200 [00:40<04:00,  1.29s/it]  8%|▊         | 15/200 [00:40<05:34,  1.81s/it]                                                Ground Truth Answer: False
+  8%|▊         | 15/200 [00:40<05:34,  1.81s/it]                                                Ground Truth Answer: False
+  8%|▊         | 15/200 [00:42<05:34,  1.81s/it]                                                Model Answer: False
+  8%|▊         | 15/200 [00:42<05:34,  1.81s/it]                                                Is Correct: True
+  8%|▊         | 15/200 [00:42<05:34,  1.81s/it]                                                Correct Count: 8/16
+  8%|▊         | 15/200 [00:42<05:34,  1.81s/it]                                                --------------------
+  8%|▊         | 15/200 [00:42<05:34,  1.81s/it]  8%|▊         | 16/200 [00:42<05:52,  1.92s/it]                                                Ground Truth Answer: False
+  8%|▊         | 16/200 [00:42<05:52,  1.92s/it]                                                Ground Truth Answer: False
+  8%|▊         | 16/200 [00:45<05:52,  1.92s/it]                                                Model Answer: False
+  8%|▊         | 16/200 [00:45<05:52,  1.92s/it]                                                Is Correct: True
+  8%|▊         | 16/200 [00:45<05:52,  1.92s/it]                                                Correct Count: 9/17
+  8%|▊         | 16/200 [00:45<05:52,  1.92s/it]                                                --------------------
+  8%|▊         | 16/200 [00:45<05:52,  1.92s/it]  8%|▊         | 17/200 [00:45<06:47,  2.23s/it]                                                Ground Truth Answer: False
+  8%|▊         | 17/200 [00:45<06:47,  2.23s/it]                                                Ground Truth Answer: False
+  8%|▊         | 17/200 [00:45<06:47,  2.23s/it]                                                Model Answer: False
+  8%|▊         | 17/200 [00:45<06:47,  2.23s/it]                                                Is Correct: True
+  8%|▊         | 17/200 [00:45<06:47,  2.23s/it]                                                Correct Count: 10/18
+  8%|▊         | 17/200 [00:45<06:47,  2.23s/it]                                                --------------------
+  8%|▊         | 17/200 [00:45<06:47,  2.23s/it]  9%|▉         | 18/200 [00:45<04:53,  1.61s/it]                                                Ground Truth Answer: True
+  9%|▉         | 18/200 [00:45<04:53,  1.61s/it]                                                Ground Truth Answer: True
+  9%|▉         | 18/200 [00:48<04:53,  1.61s/it]                                                Model Answer: False
+  9%|▉         | 18/200 [00:48<04:53,  1.61s/it]                                                Is Correct: False
+  9%|▉         | 18/200 [00:48<04:53,  1.61s/it]                                                Correct Count: 10/19
+  9%|▉         | 18/200 [00:48<04:53,  1.61s/it]                                                --------------------
+  9%|▉         | 18/200 [00:48<04:53,  1.61s/it] 10%|▉         | 19/200 [00:48<05:40,  1.88s/it]                                                Ground Truth Answer: True
+ 10%|▉         | 19/200 [00:48<05:40,  1.88s/it]                                                Ground Truth Answer: True
+ 10%|▉         | 19/200 [00:48<05:40,  1.88s/it]                                                Model Answer: None
+ 10%|▉         | 19/200 [00:48<05:40,  1.88s/it]                                                Is Correct: False
+ 10%|▉         | 19/200 [00:48<05:40,  1.88s/it]                                                Correct Count: 10/20
+ 10%|▉         | 19/200 [00:48<05:40,  1.88s/it]                                                --------------------
+ 10%|▉         | 19/200 [00:48<05:40,  1.88s/it] 10%|█         | 20/200 [00:48<04:20,  1.45s/it]                                                Ground Truth Answer: True
+ 10%|█         | 20/200 [00:48<04:20,  1.45s/it]                                                Ground Truth Answer: True
+ 10%|█         | 20/200 [00:49<04:20,  1.45s/it]                                                Model Answer: None
+ 10%|█         | 20/200 [00:49<04:20,  1.45s/it]                                                Is Correct: False
+ 10%|█         | 20/200 [00:49<04:20,  1.45s/it]                                                Correct Count: 10/21
+ 10%|█         | 20/200 [00:49<04:20,  1.45s/it]                                                --------------------
+ 10%|█         | 20/200 [00:49<04:20,  1.45s/it] 10%|█         | 21/200 [00:49<03:34,  1.20s/it]                                                Ground Truth Answer: True
+ 10%|█         | 21/200 [00:49<03:34,  1.20s/it]                                                Ground Truth Answer: True
+ 10%|█         | 21/200 [00:51<03:34,  1.20s/it]                                                Model Answer: False
+ 10%|█         | 21/200 [00:51<03:34,  1.20s/it]                                                Is Correct: False
+ 10%|█         | 21/200 [00:51<03:34,  1.20s/it]                                                Correct Count: 10/22
+ 10%|█         | 21/200 [00:51<03:34,  1.20s/it]                                                --------------------
+ 10%|█         | 21/200 [00:51<03:34,  1.20s/it] 11%|█         | 22/200 [00:51<04:24,  1.49s/it]                                                Ground Truth Answer: False
+ 11%|█         | 22/200 [00:51<04:24,  1.49s/it]                                                Ground Truth Answer: False
+ 11%|█         | 22/200 [00:52<04:24,  1.49s/it]                                                Model Answer: False
+ 11%|█         | 22/200 [00:52<04:24,  1.49s/it]                                                Is Correct: True
+ 11%|█         | 22/200 [00:52<04:24,  1.49s/it]                                                Correct Count: 11/23
+ 11%|█         | 22/200 [00:52<04:24,  1.49s/it]                                                --------------------
+ 11%|█         | 22/200 [00:52<04:24,  1.49s/it] 12%|█▏        | 23/200 [00:52<04:07,  1.40s/it]                                                Ground Truth Answer: False
+ 12%|█▏        | 23/200 [00:52<04:07,  1.40s/it]                                                Ground Truth Answer: False
+ 12%|█▏        | 23/200 [00:54<04:07,  1.40s/it]                                                Model Answer: False
+ 12%|█▏        | 23/200 [00:54<04:07,  1.40s/it]                                                Is Correct: True
+ 12%|█▏        | 23/200 [00:54<04:07,  1.40s/it]                                                Correct Count: 12/24
+ 12%|█▏        | 23/200 [00:54<04:07,  1.40s/it]                                                --------------------
+ 12%|█▏        | 23/200 [00:54<04:07,  1.40s/it] 12%|█▏        | 24/200 [00:54<04:15,  1.45s/it]                                                Ground Truth Answer: True
+ 12%|█▏        | 24/200 [00:54<04:15,  1.45s/it]                                                Ground Truth Answer: True
+ 12%|█▏        | 24/200 [00:57<04:15,  1.45s/it]                                                Model Answer: None
+ 12%|█▏        | 24/200 [00:57<04:15,  1.45s/it]                                                Is Correct: False
+ 12%|█▏        | 24/200 [00:57<04:15,  1.45s/it]                                                Correct Count: 12/25
+ 12%|█▏        | 24/200 [00:57<04:15,  1.45s/it]                                                --------------------
+ 12%|█▏        | 24/200 [00:57<04:15,  1.45s/it] 12%|█▎        | 25/200 [00:57<06:05,  2.09s/it]                                                Ground Truth Answer: False
+ 12%|█▎        | 25/200 [00:57<06:05,  2.09s/it]                                                Ground Truth Answer: False
+ 12%|█▎        | 25/200 [00:58<06:05,  2.09s/it]                                                Model Answer: None
+ 12%|█▎        | 25/200 [00:58<06:05,  2.09s/it]                                                Is Correct: False
+ 12%|█▎        | 25/200 [00:58<06:05,  2.09s/it]                                                Correct Count: 12/26
+ 12%|█▎        | 25/200 [00:58<06:05,  2.09s/it]                                                --------------------
+ 12%|█▎        | 25/200 [00:58<06:05,  2.09s/it] 13%|█▎        | 26/200 [00:58<04:22,  1.51s/it]                                                Ground Truth Answer: True
+ 13%|█▎        | 26/200 [00:58<04:22,  1.51s/it]                                                Ground Truth Answer: True
+ 13%|█▎        | 26/200 [01:02<04:22,  1.51s/it]                                                Model Answer: False
+ 13%|█▎        | 26/200 [01:02<04:22,  1.51s/it]                                                Is Correct: False
+ 13%|█▎        | 26/200 [01:02<04:22,  1.51s/it]                                                Correct Count: 12/27
+ 13%|█▎        | 26/200 [01:02<04:22,  1.51s/it]                                                --------------------
+ 13%|█▎        | 26/200 [01:02<04:22,  1.51s/it] 14%|█▎        | 27/200 [01:02<06:43,  2.33s/it]                                                Ground Truth Answer: True
+ 14%|█▎        | 27/200 [01:02<06:43,  2.33s/it]                                                Ground Truth Answer: True
+ 14%|█▎        | 27/200 [01:04<06:43,  2.33s/it]                                                Model Answer: False
+ 14%|█▎        | 27/200 [01:04<06:43,  2.33s/it]                                                Is Correct: False
+ 14%|█▎        | 27/200 [01:04<06:43,  2.33s/it]                                                Correct Count: 12/28
+ 14%|█▎        | 27/200 [01:04<06:43,  2.33s/it]                                                --------------------
+ 14%|█▎        | 27/200 [01:04<06:43,  2.33s/it] 14%|█▍        | 28/200 [01:04<06:44,  2.35s/it]                                                Ground Truth Answer: False
+ 14%|█▍        | 28/200 [01:04<06:44,  2.35s/it]                                                Ground Truth Answer: False
+ 14%|█▍        | 28/200 [01:04<06:44,  2.35s/it]                                                Model Answer: False
+ 14%|█▍        | 28/200 [01:04<06:44,  2.35s/it]                                                Is Correct: True
+ 14%|█▍        | 28/200 [01:04<06:44,  2.35s/it]                                                Correct Count: 13/29
+ 14%|█▍        | 28/200 [01:04<06:44,  2.35s/it]                                                --------------------
+ 14%|█▍        | 28/200 [01:04<06:44,  2.35s/it] 14%|█▍        | 29/200 [01:04<04:49,  1.69s/it]                                                Ground Truth Answer: False
+ 14%|█▍        | 29/200 [01:04<04:49,  1.69s/it]                                                Ground Truth Answer: False
+ 14%|█▍        | 29/200 [01:13<04:49,  1.69s/it]                                                Model Answer: True
+ 14%|█▍        | 29/200 [01:13<04:49,  1.69s/it]                                                Is Correct: False
+ 14%|█▍        | 29/200 [01:13<04:49,  1.69s/it]                                                Correct Count: 13/30
+ 14%|█▍        | 29/200 [01:13<04:49,  1.69s/it]                                                --------------------
+ 14%|█▍        | 29/200 [01:13<04:49,  1.69s/it] 15%|█▌        | 30/200 [01:13<10:58,  3.87s/it]                                                Ground Truth Answer: True
+ 15%|█▌        | 30/200 [01:13<10:58,  3.87s/it]                                                Ground Truth Answer: True
+ 15%|█▌        | 30/200 [01:18<10:58,  3.87s/it]                                                Model Answer: False
+ 15%|█▌        | 30/200 [01:18<10:58,  3.87s/it]                                                Is Correct: False
+ 15%|█▌        | 30/200 [01:18<10:58,  3.87s/it]                                                Correct Count: 13/31
+ 15%|█▌        | 30/200 [01:18<10:58,  3.87s/it]                                                --------------------
+ 15%|█▌        | 30/200 [01:18<10:58,  3.87s/it] 16%|█▌        | 31/200 [01:18<11:26,  4.06s/it]                                                Ground Truth Answer: True
+ 16%|█▌        | 31/200 [01:18<11:26,  4.06s/it]                                                Ground Truth Answer: True
+ 16%|█▌        | 31/200 [01:18<11:26,  4.06s/it]                                                Model Answer: False
+ 16%|█▌        | 31/200 [01:18<11:26,  4.06s/it]                                                Is Correct: False
+ 16%|█▌        | 31/200 [01:18<11:26,  4.06s/it]                                                Correct Count: 13/32
+ 16%|█▌        | 31/200 [01:18<11:26,  4.06s/it]                                                --------------------
+ 16%|█▌        | 31/200 [01:18<11:26,  4.06s/it] 16%|█▌        | 32/200 [01:18<08:09,  2.92s/it]                                                Ground Truth Answer: False
+ 16%|█▌        | 32/200 [01:18<08:09,  2.92s/it]                                                Ground Truth Answer: False
+ 16%|█▌        | 32/200 [01:22<08:09,  2.92s/it]                                                Model Answer: False
+ 16%|█▌        | 32/200 [01:22<08:09,  2.92s/it]                                                Is Correct: True
+ 16%|█▌        | 32/200 [01:22<08:09,  2.92s/it]                                                Correct Count: 14/33
+ 16%|█▌        | 32/200 [01:22<08:09,  2.92s/it]                                                --------------------
+ 16%|█▌        | 32/200 [01:22<08:09,  2.92s/it] 16%|█▋        | 33/200 [01:22<08:34,  3.08s/it]                                                Ground Truth Answer: False
+ 16%|█▋        | 33/200 [01:22<08:34,  3.08s/it]                                                Ground Truth Answer: False
+ 16%|█▋        | 33/200 [01:22<08:34,  3.08s/it]                                                Model Answer: False
+ 16%|█▋        | 33/200 [01:22<08:34,  3.08s/it]                                                Is Correct: True
+ 16%|█▋        | 33/200 [01:22<08:34,  3.08s/it]                                                Correct Count: 15/34
+ 16%|█▋        | 33/200 [01:22<08:34,  3.08s/it]                                                --------------------
+ 16%|█▋        | 33/200 [01:22<08:34,  3.08s/it] 17%|█▋        | 34/200 [01:22<06:27,  2.33s/it]                                                Ground Truth Answer: False
+ 17%|█▋        | 34/200 [01:22<06:27,  2.33s/it]                                                Ground Truth Answer: False
+ 17%|█▋        | 34/200 [01:22<06:27,  2.33s/it]                                                Model Answer: None
+ 17%|█▋        | 34/200 [01:22<06:27,  2.33s/it]                                                Is Correct: False
+ 17%|█▋        | 34/200 [01:22<06:27,  2.33s/it]                                                Correct Count: 15/35
+ 17%|█▋        | 34/200 [01:22<06:27,  2.33s/it]                                                --------------------
+ 17%|█▋        | 34/200 [01:22<06:27,  2.33s/it] 18%|█▊        | 35/200 [01:22<04:37,  1.68s/it]                                                Ground Truth Answer: False
+ 18%|█▊        | 35/200 [01:22<04:37,  1.68s/it]                                                Ground Truth Answer: False
+ 18%|█▊        | 35/200 [01:22<04:37,  1.68s/it]                                                Model Answer: False
+ 18%|█▊        | 35/200 [01:22<04:37,  1.68s/it]                                                Is Correct: True
+ 18%|█▊        | 35/200 [01:22<04:37,  1.68s/it]                                                Correct Count: 16/36
+ 18%|█▊        | 35/200 [01:22<04:37,  1.68s/it]                                                --------------------
+ 18%|█▊        | 35/200 [01:22<04:37,  1.68s/it] 18%|█▊        | 36/200 [01:22<03:21,  1.23s/it]                                                Ground Truth Answer: True
+ 18%|█▊        | 36/200 [01:22<03:21,  1.23s/it]                                                Ground Truth Answer: True
+ 18%|█▊        | 36/200 [01:25<03:21,  1.23s/it]                                                Model Answer: False
+ 18%|█▊        | 36/200 [01:25<03:21,  1.23s/it]                                                Is Correct: False
+ 18%|█▊        | 36/200 [01:25<03:21,  1.23s/it]                                                Correct Count: 16/37
+ 18%|█▊        | 36/200 [01:25<03:21,  1.23s/it]                                                --------------------
+ 18%|█▊        | 36/200 [01:25<03:21,  1.23s/it] 18%|█▊        | 37/200 [01:25<04:32,  1.67s/it]                                                Ground Truth Answer: True
+ 18%|█▊        | 37/200 [01:25<04:32,  1.67s/it]                                                Ground Truth Answer: True
+ 18%|█▊        | 37/200 [01:26<04:32,  1.67s/it]                                                Model Answer: False
+ 18%|█▊        | 37/200 [01:26<04:32,  1.67s/it]                                                Is Correct: False
+ 18%|█▊        | 37/200 [01:26<04:32,  1.67s/it]                                                Correct Count: 16/38
+ 18%|█▊        | 37/200 [01:26<04:32,  1.67s/it]                                                --------------------
+ 18%|█▊        | 37/200 [01:26<04:32,  1.67s/it] 19%|█▉        | 38/200 [01:26<04:04,  1.51s/it]                                                Ground Truth Answer: False
+ 19%|█▉        | 38/200 [01:26<04:04,  1.51s/it]                                                Ground Truth Answer: False
+ 19%|█▉        | 38/200 [01:27<04:04,  1.51s/it]                                                Model Answer: False
+ 19%|█▉        | 38/200 [01:27<04:04,  1.51s/it]                                                Is Correct: True
+ 19%|█▉        | 38/200 [01:27<04:04,  1.51s/it]                                                Correct Count: 17/39
+ 19%|█▉        | 38/200 [01:27<04:04,  1.51s/it]                                                --------------------
+ 19%|█▉        | 38/200 [01:27<04:04,  1.51s/it] 20%|█▉        | 39/200 [01:27<03:01,  1.13s/it]                                                Ground Truth Answer: False
+ 20%|█▉        | 39/200 [01:27<03:01,  1.13s/it]                                                Ground Truth Answer: False
+ 20%|█▉        | 39/200 [01:27<03:01,  1.13s/it]                                                Model Answer: False
+ 20%|█▉        | 39/200 [01:27<03:01,  1.13s/it]                                                Is Correct: True
+ 20%|█▉        | 39/200 [01:27<03:01,  1.13s/it]                                                Correct Count: 18/40
+ 20%|█▉        | 39/200 [01:27<03:01,  1.13s/it]                                                --------------------
+ 20%|█▉        | 39/200 [01:27<03:01,  1.13s/it] 20%|██        | 40/200 [01:27<02:14,  1.19it/s]                                                Ground Truth Answer: False
+ 20%|██        | 40/200 [01:27<02:14,  1.19it/s]                                                Ground Truth Answer: False
+ 20%|██        | 40/200 [01:29<02:14,  1.19it/s]                                                Model Answer: None
+ 20%|██        | 40/200 [01:29<02:14,  1.19it/s]                                                Is Correct: False
+ 20%|██        | 40/200 [01:29<02:14,  1.19it/s]                                                Correct Count: 18/41
+ 20%|██        | 40/200 [01:29<02:14,  1.19it/s]                                                --------------------
+ 20%|██        | 40/200 [01:29<02:14,  1.19it/s] 20%|██        | 41/200 [01:29<03:01,  1.14s/it]                                                Ground Truth Answer: False
+ 20%|██        | 41/200 [01:29<03:01,  1.14s/it]                                                Ground Truth Answer: False
+ 20%|██        | 41/200 [01:32<03:01,  1.14s/it]                                                Model Answer: False
+ 20%|██        | 41/200 [01:32<03:01,  1.14s/it]                                                Is Correct: True
+ 20%|██        | 41/200 [01:32<03:01,  1.14s/it]                                                Correct Count: 19/42
+ 20%|██        | 41/200 [01:32<03:01,  1.14s/it]                                                --------------------
+ 20%|██        | 41/200 [01:32<03:01,  1.14s/it] 21%|██        | 42/200 [01:32<04:54,  1.86s/it]                                                Ground Truth Answer: True
+ 21%|██        | 42/200 [01:32<04:54,  1.86s/it]                                                Ground Truth Answer: True
+ 21%|██        | 42/200 [01:33<04:54,  1.86s/it]                                                Model Answer: None
+ 21%|██        | 42/200 [01:33<04:54,  1.86s/it]                                                Is Correct: False
+ 21%|██        | 42/200 [01:33<04:54,  1.86s/it]                                                Correct Count: 19/43
+ 21%|██        | 42/200 [01:33<04:54,  1.86s/it]                                                --------------------
+ 21%|██        | 42/200 [01:33<04:54,  1.86s/it] 22%|██▏       | 43/200 [01:33<03:45,  1.44s/it]                                                Ground Truth Answer: True
+ 22%|██▏       | 43/200 [01:33<03:45,  1.44s/it]                                                Ground Truth Answer: True
+ 22%|██▏       | 43/200 [01:47<03:45,  1.44s/it]                                                Model Answer: True
+ 22%|██▏       | 43/200 [01:47<03:45,  1.44s/it]                                                Is Correct: True
+ 22%|██▏       | 43/200 [01:47<03:45,  1.44s/it]                                                Correct Count: 20/44
+ 22%|██▏       | 43/200 [01:47<03:45,  1.44s/it]                                                --------------------
+ 22%|██▏       | 43/200 [01:47<03:45,  1.44s/it] 22%|██▏       | 44/200 [01:47<13:37,  5.24s/it]                                                Ground Truth Answer: True
+ 22%|██▏       | 44/200 [01:47<13:37,  5.24s/it]                                                Ground Truth Answer: True
+ 22%|██▏       | 44/200 [01:49<13:37,  5.24s/it]                                                Model Answer: True
+ 22%|██▏       | 44/200 [01:49<13:37,  5.24s/it]                                                Is Correct: True
+ 22%|██▏       | 44/200 [01:49<13:37,  5.24s/it]                                                Correct Count: 21/45
+ 22%|██▏       | 44/200 [01:49<13:37,  5.24s/it]                                                --------------------
+ 22%|██▏       | 44/200 [01:49<13:37,  5.24s/it] 22%|██▎       | 45/200 [01:49<11:39,  4.51s/it]                                                Ground Truth Answer: True
+ 22%|██▎       | 45/200 [01:49<11:39,  4.51s/it]                                                Ground Truth Answer: True
+ 22%|██▎       | 45/200 [01:51<11:39,  4.51s/it]                                                Model Answer: False
+ 22%|██▎       | 45/200 [01:51<11:39,  4.51s/it]                                                Is Correct: False
+ 22%|██▎       | 45/200 [01:51<11:39,  4.51s/it]                                                Correct Count: 21/46
+ 22%|██▎       | 45/200 [01:51<11:39,  4.51s/it]                                                --------------------
+ 22%|██▎       | 45/200 [01:51<11:39,  4.51s/it] 23%|██▎       | 46/200 [01:51<09:38,  3.76s/it]                                                Ground Truth Answer: False
+ 23%|██▎       | 46/200 [01:51<09:38,  3.76s/it]                                                Ground Truth Answer: False
+ 23%|██▎       | 46/200 [01:54<09:38,  3.76s/it]                                                Model Answer: False
+ 23%|██▎       | 46/200 [01:54<09:38,  3.76s/it]                                                Is Correct: True
+ 23%|██▎       | 46/200 [01:54<09:38,  3.76s/it]                                                Correct Count: 22/47
+ 23%|██▎       | 46/200 [01:54<09:38,  3.76s/it]                                                --------------------
+ 23%|██▎       | 46/200 [01:54<09:38,  3.76s/it] 24%|██▎       | 47/200 [01:54<08:44,  3.43s/it]                                                Ground Truth Answer: False
+ 24%|██▎       | 47/200 [01:54<08:44,  3.43s/it]                                                Ground Truth Answer: False
+ 24%|██▎       | 47/200 [01:58<08:44,  3.43s/it]                                                Model Answer: False
+ 24%|██▎       | 47/200 [01:58<08:44,  3.43s/it]                                                Is Correct: True
+ 24%|██▎       | 47/200 [01:58<08:44,  3.43s/it]                                                Correct Count: 23/48
+ 24%|██▎       | 47/200 [01:58<08:44,  3.43s/it]                                                --------------------
+ 24%|██▎       | 47/200 [01:58<08:44,  3.43s/it] 24%|██▍       | 48/200 [01:58<08:53,  3.51s/it]                                                Ground Truth Answer: True
+ 24%|██▍       | 48/200 [01:58<08:53,  3.51s/it]                                                Ground Truth Answer: True
+ 24%|██▍       | 48/200 [02:00<08:53,  3.51s/it]                                                Model Answer: False
+ 24%|██▍       | 48/200 [02:00<08:53,  3.51s/it]                                                Is Correct: False
+ 24%|██▍       | 48/200 [02:00<08:53,  3.51s/it]                                                Correct Count: 23/49
+ 24%|██▍       | 48/200 [02:00<08:53,  3.51s/it]                                                --------------------
+ 24%|██▍       | 48/200 [02:00<08:53,  3.51s/it] 24%|██▍       | 49/200 [02:00<07:49,  3.11s/it]                                                Ground Truth Answer: False
+ 24%|██▍       | 49/200 [02:00<07:49,  3.11s/it]                                                Ground Truth Answer: False
+ 24%|██▍       | 49/200 [02:00<07:49,  3.11s/it]                                                Model Answer: False
+ 24%|██▍       | 49/200 [02:00<07:49,  3.11s/it]                                                Is Correct: True
+ 24%|██▍       | 49/200 [02:00<07:49,  3.11s/it]                                                Correct Count: 24/50
+ 24%|██▍       | 49/200 [02:00<07:49,  3.11s/it]                                                --------------------
+ 24%|██▍       | 49/200 [02:00<07:49,  3.11s/it] 25%|██▌       | 50/200 [02:00<05:34,  2.23s/it]                                                Ground Truth Answer: False
+ 25%|██▌       | 50/200 [02:00<05:34,  2.23s/it]                                                Ground Truth Answer: False
+ 25%|██▌       | 50/200 [02:05<05:34,  2.23s/it]                                                Model Answer: False
+ 25%|██▌       | 50/200 [02:05<05:34,  2.23s/it]                                                Is Correct: True
+ 25%|██▌       | 50/200 [02:05<05:34,  2.23s/it]                                                Correct Count: 25/51
+ 25%|██▌       | 50/200 [02:05<05:34,  2.23s/it]                                                --------------------
+ 25%|██▌       | 50/200 [02:05<05:34,  2.23s/it] 26%|██▌       | 51/200 [02:05<07:33,  3.04s/it]                                                Ground Truth Answer: True
+ 26%|██▌       | 51/200 [02:05<07:33,  3.04s/it]                                                Ground Truth Answer: True
+ 26%|██▌       | 51/200 [02:07<07:33,  3.04s/it]                                                Model Answer: False
+ 26%|██▌       | 51/200 [02:07<07:33,  3.04s/it]                                                Is Correct: False
+ 26%|██▌       | 51/200 [02:07<07:33,  3.04s/it]                                                Correct Count: 25/52
+ 26%|██▌       | 51/200 [02:07<07:33,  3.04s/it]                                                --------------------
+ 26%|██▌       | 51/200 [02:07<07:33,  3.04s/it] 26%|██▌       | 52/200 [02:07<06:28,  2.63s/it]                                                Ground Truth Answer: False
+ 26%|██▌       | 52/200 [02:07<06:28,  2.63s/it]                                                Ground Truth Answer: False
+ 26%|██▌       | 52/200 [02:09<06:28,  2.63s/it]                                                Model Answer: False
+ 26%|██▌       | 52/200 [02:09<06:28,  2.63s/it]                                                Is Correct: True
+ 26%|██▌       | 52/200 [02:09<06:28,  2.63s/it]                                                Correct Count: 26/53
+ 26%|██▌       | 52/200 [02:09<06:28,  2.63s/it]                                                --------------------
+ 26%|██▌       | 52/200 [02:09<06:28,  2.63s/it] 26%|██▋       | 53/200 [02:09<06:06,  2.49s/it]                                                Ground Truth Answer: False
+ 26%|██▋       | 53/200 [02:09<06:06,  2.49s/it]                                                Ground Truth Answer: False
+ 26%|██▋       | 53/200 [02:13<06:06,  2.49s/it]                                                Model Answer: False
+ 26%|██▋       | 53/200 [02:13<06:06,  2.49s/it]                                                Is Correct: True
+ 26%|██▋       | 53/200 [02:13<06:06,  2.49s/it]                                                Correct Count: 27/54
+ 26%|██▋       | 53/200 [02:13<06:06,  2.49s/it]                                                --------------------
+ 26%|██▋       | 53/200 [02:13<06:06,  2.49s/it] 27%|██▋       | 54/200 [02:13<07:18,  3.00s/it]                                                Ground Truth Answer: False
+ 27%|██▋       | 54/200 [02:13<07:18,  3.00s/it]                                                Ground Truth Answer: False
+ 27%|██▋       | 54/200 [02:14<07:18,  3.00s/it]                                                Model Answer: False
+ 27%|██▋       | 54/200 [02:14<07:18,  3.00s/it]                                                Is Correct: True
+ 27%|██▋       | 54/200 [02:14<07:18,  3.00s/it]                                                Correct Count: 28/55
+ 27%|██▋       | 54/200 [02:14<07:18,  3.00s/it]                                                --------------------
+ 27%|██▋       | 54/200 [02:14<07:18,  3.00s/it] 28%|██▊       | 55/200 [02:14<05:34,  2.31s/it]                                                Ground Truth Answer: False
+ 28%|██▊       | 55/200 [02:14<05:34,  2.31s/it]                                                Ground Truth Answer: False
+ 28%|██▊       | 55/200 [02:14<05:34,  2.31s/it]                                                Model Answer: False
+ 28%|██▊       | 55/200 [02:14<05:34,  2.31s/it]                                                Is Correct: True
+ 28%|██▊       | 55/200 [02:14<05:34,  2.31s/it]                                                Correct Count: 29/56
+ 28%|██▊       | 55/200 [02:14<05:34,  2.31s/it]                                                --------------------
+ 28%|██▊       | 55/200 [02:14<05:34,  2.31s/it] 28%|██▊       | 56/200 [02:14<04:00,  1.67s/it]                                                Ground Truth Answer: True
+ 28%|██▊       | 56/200 [02:14<04:00,  1.67s/it]                                                Ground Truth Answer: True
+ 28%|██▊       | 56/200 [02:15<04:00,  1.67s/it]                                                Model Answer: None
+ 28%|██▊       | 56/200 [02:15<04:00,  1.67s/it]                                                Is Correct: False
+ 28%|██▊       | 56/200 [02:15<04:00,  1.67s/it]                                                Correct Count: 29/57
+ 28%|██▊       | 56/200 [02:15<04:00,  1.67s/it]                                                --------------------
+ 28%|██▊       | 56/200 [02:15<04:00,  1.67s/it] 28%|██▊       | 57/200 [02:15<03:30,  1.47s/it]                                                Ground Truth Answer: True
+ 28%|██▊       | 57/200 [02:15<03:30,  1.47s/it]                                                Ground Truth Answer: True
+ 28%|██▊       | 57/200 [02:16<03:30,  1.47s/it]                                                Model Answer: None
+ 28%|██▊       | 57/200 [02:16<03:30,  1.47s/it]                                                Is Correct: False
+ 28%|██▊       | 57/200 [02:16<03:30,  1.47s/it]                                                Correct Count: 29/58
+ 28%|██▊       | 57/200 [02:16<03:30,  1.47s/it]                                                --------------------
+ 28%|██▊       | 57/200 [02:16<03:30,  1.47s/it] 29%|██▉       | 58/200 [02:16<03:12,  1.35s/it]                                                Ground Truth Answer: False
+ 29%|██▉       | 58/200 [02:16<03:12,  1.35s/it]                                                Ground Truth Answer: False
+ 29%|██▉       | 58/200 [02:18<03:12,  1.35s/it]                                                Model Answer: False
+ 29%|██▉       | 58/200 [02:18<03:12,  1.35s/it]                                                Is Correct: True
+ 29%|██▉       | 58/200 [02:18<03:12,  1.35s/it]                                                Correct Count: 30/59
+ 29%|██▉       | 58/200 [02:18<03:12,  1.35s/it]                                                --------------------
+ 29%|██▉       | 58/200 [02:18<03:12,  1.35s/it] 30%|██▉       | 59/200 [02:18<03:35,  1.53s/it]                                                Ground Truth Answer: False
+ 30%|██▉       | 59/200 [02:18<03:35,  1.53s/it]                                                Ground Truth Answer: False
+ 30%|██▉       | 59/200 [02:18<03:35,  1.53s/it]                                                Model Answer: False
+ 30%|██▉       | 59/200 [02:18<03:35,  1.53s/it]                                                Is Correct: True
+ 30%|██▉       | 59/200 [02:18<03:35,  1.53s/it]                                                Correct Count: 31/60
+ 30%|██▉       | 59/200 [02:18<03:35,  1.53s/it]                                                --------------------
+ 30%|██▉       | 59/200 [02:18<03:35,  1.53s/it] 30%|███       | 60/200 [02:18<02:39,  1.14s/it]                                                Ground Truth Answer: False
+ 30%|███       | 60/200 [02:18<02:39,  1.14s/it]                                                Ground Truth Answer: False
+ 30%|███       | 60/200 [02:18<02:39,  1.14s/it]                                                Model Answer: None
+ 30%|███       | 60/200 [02:18<02:39,  1.14s/it]                                                Is Correct: False
+ 30%|███       | 60/200 [02:18<02:39,  1.14s/it]                                                Correct Count: 31/61
+ 30%|███       | 60/200 [02:18<02:39,  1.14s/it]                                                --------------------
+ 30%|███       | 60/200 [02:18<02:39,  1.14s/it] 30%|███       | 61/200 [02:18<01:56,  1.19it/s]                                                Ground Truth Answer: False
+ 30%|███       | 61/200 [02:18<01:56,  1.19it/s]                                                Ground Truth Answer: False
+ 30%|███       | 61/200 [02:19<01:56,  1.19it/s]                                                Model Answer: None
+ 30%|███       | 61/200 [02:19<01:56,  1.19it/s]                                                Is Correct: False
+ 30%|███       | 61/200 [02:19<01:56,  1.19it/s]                                                Correct Count: 31/62
+ 30%|███       | 61/200 [02:19<01:56,  1.19it/s]                                                --------------------
+ 30%|███       | 61/200 [02:19<01:56,  1.19it/s] 31%|███       | 62/200 [02:19<01:46,  1.29it/s]                                                Ground Truth Answer: False
+ 31%|███       | 62/200 [02:19<01:46,  1.29it/s]                                                Ground Truth Answer: False
+ 31%|███       | 62/200 [02:21<01:46,  1.29it/s]                                                Model Answer: False
+ 31%|███       | 62/200 [02:21<01:46,  1.29it/s]                                                Is Correct: True
+ 31%|███       | 62/200 [02:21<01:46,  1.29it/s]                                                Correct Count: 32/63
+ 31%|███       | 62/200 [02:21<01:46,  1.29it/s]                                                --------------------
+ 31%|███       | 62/200 [02:21<01:46,  1.29it/s] 32%|███▏      | 63/200 [02:21<02:35,  1.13s/it]                                                Ground Truth Answer: False
+ 32%|███▏      | 63/200 [02:21<02:35,  1.13s/it]                                                Ground Truth Answer: False
+ 32%|███▏      | 63/200 [02:23<02:35,  1.13s/it]                                                Model Answer: False
+ 32%|███▏      | 63/200 [02:23<02:35,  1.13s/it]                                                Is Correct: True
+ 32%|███▏      | 63/200 [02:23<02:35,  1.13s/it]                                                Correct Count: 33/64
+ 32%|███▏      | 63/200 [02:23<02:35,  1.13s/it]                                                --------------------
+ 32%|███▏      | 63/200 [02:23<02:35,  1.13s/it] 32%|███▏      | 64/200 [02:23<03:26,  1.52s/it]                                                Ground Truth Answer: False
+ 32%|███▏      | 64/200 [02:23<03:26,  1.52s/it]                                                Ground Truth Answer: False
+ 32%|███▏      | 64/200 [02:26<03:26,  1.52s/it]                                                Model Answer: False
+ 32%|███▏      | 64/200 [02:26<03:26,  1.52s/it]                                                Is Correct: True
+ 32%|███▏      | 64/200 [02:26<03:26,  1.52s/it]                                                Correct Count: 34/65
+ 32%|███▏      | 64/200 [02:26<03:26,  1.52s/it]                                                --------------------
+ 32%|███▏      | 64/200 [02:26<03:26,  1.52s/it] 32%|███▎      | 65/200 [02:26<03:54,  1.73s/it]                                                Ground Truth Answer: True
+ 32%|███▎      | 65/200 [02:26<03:54,  1.73s/it]                                                Ground Truth Answer: True
+ 32%|███▎      | 65/200 [02:37<03:54,  1.73s/it]                                                Model Answer: True
+ 32%|███▎      | 65/200 [02:37<03:54,  1.73s/it]                                                Is Correct: True
+ 32%|███▎      | 65/200 [02:37<03:54,  1.73s/it]                                                Correct Count: 35/66
+ 32%|███▎      | 65/200 [02:37<03:54,  1.73s/it]                                                --------------------
+ 32%|███▎      | 65/200 [02:37<03:54,  1.73s/it] 33%|███▎      | 66/200 [02:37<10:27,  4.68s/it]                                                Ground Truth Answer: True
+ 33%|███▎      | 66/200 [02:37<10:27,  4.68s/it]                                                Ground Truth Answer: True
+ 33%|███▎      | 66/200 [02:37<10:27,  4.68s/it]                                                Model Answer: None
+ 33%|███▎      | 66/200 [02:37<10:27,  4.68s/it]                                                Is Correct: False
+ 33%|███▎      | 66/200 [02:37<10:27,  4.68s/it]                                                Correct Count: 35/67
+ 33%|███▎      | 66/200 [02:37<10:27,  4.68s/it]                                                --------------------
+ 33%|███▎      | 66/200 [02:37<10:27,  4.68s/it] 34%|███▎      | 67/200 [02:37<07:21,  3.32s/it]                                                Ground Truth Answer: False
+ 34%|███▎      | 67/200 [02:37<07:21,  3.32s/it]                                                Ground Truth Answer: False
+ 34%|███▎      | 67/200 [02:40<07:21,  3.32s/it]                                                Model Answer: False
+ 34%|███▎      | 67/200 [02:40<07:21,  3.32s/it]                                                Is Correct: True
+ 34%|███▎      | 67/200 [02:40<07:21,  3.32s/it]                                                Correct Count: 36/68
+ 34%|███▎      | 67/200 [02:40<07:21,  3.32s/it]                                                --------------------
+ 34%|███▎      | 67/200 [02:40<07:21,  3.32s/it] 34%|███▍      | 68/200 [02:40<06:47,  3.09s/it]                                                Ground Truth Answer: False
+ 34%|███▍      | 68/200 [02:40<06:47,  3.09s/it]                                                Ground Truth Answer: False
+ 34%|███▍      | 68/200 [02:41<06:47,  3.09s/it]                                                Model Answer: True
+ 34%|███▍      | 68/200 [02:41<06:47,  3.09s/it]                                                Is Correct: False
+ 34%|███▍      | 68/200 [02:41<06:47,  3.09s/it]                                                Correct Count: 36/69
+ 34%|███▍      | 68/200 [02:41<06:47,  3.09s/it]                                                --------------------
+ 34%|███▍      | 68/200 [02:41<06:47,  3.09s/it] 34%|███▍      | 69/200 [02:41<05:33,  2.54s/it]                                                Ground Truth Answer: True
+ 34%|███▍      | 69/200 [02:41<05:33,  2.54s/it]                                                Ground Truth Answer: True
+ 34%|███▍      | 69/200 [02:41<05:33,  2.54s/it]                                                Model Answer: False
+ 34%|███▍      | 69/200 [02:41<05:33,  2.54s/it]                                                Is Correct: False
+ 34%|███▍      | 69/200 [02:41<05:33,  2.54s/it]                                                Correct Count: 36/70
+ 34%|███▍      | 69/200 [02:41<05:33,  2.54s/it]                                                --------------------
+ 34%|███▍      | 69/200 [02:41<05:33,  2.54s/it] 35%|███▌      | 70/200 [02:41<03:57,  1.83s/it]                                                Ground Truth Answer: True
+ 35%|███▌      | 70/200 [02:41<03:57,  1.83s/it]                                                Ground Truth Answer: True
+ 35%|███▌      | 70/200 [02:46<03:57,  1.83s/it]                                                Model Answer: False
+ 35%|███▌      | 70/200 [02:46<03:57,  1.83s/it]                                                Is Correct: False
+ 35%|███▌      | 70/200 [02:46<03:57,  1.83s/it]                                                Correct Count: 36/71
+ 35%|███▌      | 70/200 [02:46<03:57,  1.83s/it]                                                --------------------
+ 35%|███▌      | 70/200 [02:46<03:57,  1.83s/it] 36%|███▌      | 71/200 [02:46<05:58,  2.78s/it]                                                Ground Truth Answer: True
+ 36%|███▌      | 71/200 [02:46<05:58,  2.78s/it]                                                Ground Truth Answer: True
+ 36%|███▌      | 71/200 [02:49<05:58,  2.78s/it]                                                Model Answer: False
+ 36%|███▌      | 71/200 [02:49<05:58,  2.78s/it]                                                Is Correct: False
+ 36%|███▌      | 71/200 [02:49<05:58,  2.78s/it]                                                Correct Count: 36/72
+ 36%|███▌      | 71/200 [02:49<05:58,  2.78s/it]                                                --------------------
+ 36%|███▌      | 71/200 [02:49<05:58,  2.78s/it] 36%|███▌      | 72/200 [02:49<05:51,  2.75s/it]                                                Ground Truth Answer: False
+ 36%|███▌      | 72/200 [02:49<05:51,  2.75s/it]                                                Ground Truth Answer: False
+ 36%|███▌      | 72/200 [02:53<05:51,  2.75s/it]                                                Model Answer: False
+ 36%|███▌      | 72/200 [02:53<05:51,  2.75s/it]                                                Is Correct: True
+ 36%|███▌      | 72/200 [02:53<05:51,  2.75s/it]                                                Correct Count: 37/73
+ 36%|███▌      | 72/200 [02:53<05:51,  2.75s/it]                                                --------------------
+ 36%|███▌      | 72/200 [02:53<05:51,  2.75s/it] 36%|███▋      | 73/200 [02:53<06:26,  3.05s/it]                                                Ground Truth Answer: True
+ 36%|███▋      | 73/200 [02:53<06:26,  3.05s/it]                                                Ground Truth Answer: True
+ 36%|███▋      | 73/200 [02:53<06:26,  3.05s/it]                                                Model Answer: None
+ 36%|███▋      | 73/200 [02:53<06:26,  3.05s/it]                                                Is Correct: False
+ 36%|███▋      | 73/200 [02:53<06:26,  3.05s/it]                                                Correct Count: 37/74
+ 36%|███▋      | 73/200 [02:53<06:26,  3.05s/it]                                                --------------------
+ 36%|███▋      | 73/200 [02:53<06:26,  3.05s/it] 37%|███▋      | 74/200 [02:53<04:51,  2.31s/it]                                                Ground Truth Answer: True
+ 37%|███▋      | 74/200 [02:53<04:51,  2.31s/it]                                                Ground Truth Answer: True
+ 37%|███▋      | 74/200 [02:54<04:51,  2.31s/it]                                                Model Answer: False
+ 37%|███▋      | 74/200 [02:54<04:51,  2.31s/it]                                                Is Correct: False
+ 37%|███▋      | 74/200 [02:54<04:51,  2.31s/it]                                                Correct Count: 37/75
+ 37%|███▋      | 74/200 [02:54<04:51,  2.31s/it]                                                --------------------
+ 37%|███▋      | 74/200 [02:54<04:51,  2.31s/it] 38%|███▊      | 75/200 [02:54<03:29,  1.68s/it]                                                Ground Truth Answer: True
+ 38%|███▊      | 75/200 [02:54<03:29,  1.68s/it]                                                Ground Truth Answer: True
+ 38%|███▊      | 75/200 [02:54<03:29,  1.68s/it]                                                Model Answer: False
+ 38%|███▊      | 75/200 [02:54<03:29,  1.68s/it]                                                Is Correct: False
+ 38%|███▊      | 75/200 [02:54<03:29,  1.68s/it]                                                Correct Count: 37/76
+ 38%|███▊      | 75/200 [02:54<03:29,  1.68s/it]                                                --------------------
+ 38%|███▊      | 75/200 [02:54<03:29,  1.68s/it] 38%|███▊      | 76/200 [02:54<02:34,  1.25s/it]                                                Ground Truth Answer: False
+ 38%|███▊      | 76/200 [02:54<02:34,  1.25s/it]                                                Ground Truth Answer: False
+ 38%|███▊      | 76/200 [02:54<02:34,  1.25s/it]                                                Model Answer: False
+ 38%|███▊      | 76/200 [02:54<02:34,  1.25s/it]                                                Is Correct: True
+ 38%|███▊      | 76/200 [02:54<02:34,  1.25s/it]                                                Correct Count: 38/77
+ 38%|███▊      | 76/200 [02:54<02:34,  1.25s/it]                                                --------------------
+ 38%|███▊      | 76/200 [02:54<02:34,  1.25s/it] 38%|███▊      | 77/200 [02:54<01:54,  1.07it/s]                                                Ground Truth Answer: False
+ 38%|███▊      | 77/200 [02:54<01:54,  1.07it/s]                                                Ground Truth Answer: False
+ 38%|███▊      | 77/200 [02:54<01:54,  1.07it/s]                                                Model Answer: False
+ 38%|███▊      | 77/200 [02:54<01:54,  1.07it/s]                                                Is Correct: True
+ 38%|███▊      | 77/200 [02:54<01:54,  1.07it/s]                                                Correct Count: 39/78
+ 38%|███▊      | 77/200 [02:54<01:54,  1.07it/s]                                                --------------------
+ 38%|███▊      | 77/200 [02:54<01:54,  1.07it/s] 39%|███▉      | 78/200 [02:54<01:27,  1.40it/s]                                                Ground Truth Answer: False
+ 39%|███▉      | 78/200 [02:54<01:27,  1.40it/s]                                                Ground Truth Answer: False
+ 39%|███▉      | 78/200 [02:57<01:27,  1.40it/s]                                                Model Answer: False
+ 39%|███▉      | 78/200 [02:57<01:27,  1.40it/s]                                                Is Correct: True
+ 39%|███▉      | 78/200 [02:57<01:27,  1.40it/s]                                                Correct Count: 40/79
+ 39%|███▉      | 78/200 [02:57<01:27,  1.40it/s]                                                --------------------
+ 39%|███▉      | 78/200 [02:57<01:27,  1.40it/s] 40%|███▉      | 79/200 [02:57<02:32,  1.26s/it]                                                Ground Truth Answer: True
+ 40%|███▉      | 79/200 [02:57<02:32,  1.26s/it]                                                Ground Truth Answer: True
+ 40%|███▉      | 79/200 [02:59<02:32,  1.26s/it]                                                Model Answer: False
+ 40%|███▉      | 79/200 [02:59<02:32,  1.26s/it]                                                Is Correct: False
+ 40%|███▉      | 79/200 [02:59<02:32,  1.26s/it]                                                Correct Count: 40/80
+ 40%|███▉      | 79/200 [02:59<02:32,  1.26s/it]                                                --------------------
+ 40%|███▉      | 79/200 [02:59<02:32,  1.26s/it] 40%|████      | 80/200 [02:59<03:16,  1.64s/it]                                                Ground Truth Answer: False
+ 40%|████      | 80/200 [02:59<03:16,  1.64s/it]                                                Ground Truth Answer: False
+ 40%|████      | 80/200 [03:03<03:16,  1.64s/it]                                                Model Answer: False
+ 40%|████      | 80/200 [03:03<03:16,  1.64s/it]                                                Is Correct: True
+ 40%|████      | 80/200 [03:03<03:16,  1.64s/it]                                                Correct Count: 41/81
+ 40%|████      | 80/200 [03:03<03:16,  1.64s/it]                                                --------------------
+ 40%|████      | 80/200 [03:03<03:16,  1.64s/it] 40%|████      | 81/200 [03:03<04:18,  2.17s/it]                                                Ground Truth Answer: True
+ 40%|████      | 81/200 [03:03<04:18,  2.17s/it]                                                Ground Truth Answer: True
+ 40%|████      | 81/200 [03:03<04:18,  2.17s/it]                                                Model Answer: None
+ 40%|████      | 81/200 [03:03<04:18,  2.17s/it]                                                Is Correct: False
+ 40%|████      | 81/200 [03:03<04:18,  2.17s/it]                                                Correct Count: 41/82
+ 40%|████      | 81/200 [03:03<04:18,  2.17s/it]                                                --------------------
+ 40%|████      | 81/200 [03:03<04:18,  2.17s/it] 41%|████      | 82/200 [03:03<03:05,  1.57s/it]                                                Ground Truth Answer: False
+ 41%|████      | 82/200 [03:03<03:05,  1.57s/it]                                                Ground Truth Answer: False
+ 41%|████      | 82/200 [03:03<03:05,  1.57s/it]                                                Model Answer: False
+ 41%|████      | 82/200 [03:03<03:05,  1.57s/it]                                                Is Correct: True
+ 41%|████      | 82/200 [03:03<03:05,  1.57s/it]                                                Correct Count: 42/83
+ 41%|████      | 82/200 [03:03<03:05,  1.57s/it]                                                --------------------
+ 41%|████      | 82/200 [03:03<03:05,  1.57s/it] 42%|████▏     | 83/200 [03:03<02:14,  1.15s/it]                                                Ground Truth Answer: True
+ 42%|████▏     | 83/200 [03:03<02:14,  1.15s/it]                                                Ground Truth Answer: True
+ 42%|████▏     | 83/200 [03:06<02:14,  1.15s/it]                                                Model Answer: False
+ 42%|████▏     | 83/200 [03:06<02:14,  1.15s/it]                                                Is Correct: False
+ 42%|████▏     | 83/200 [03:06<02:14,  1.15s/it]                                                Correct Count: 42/84
+ 42%|████▏     | 83/200 [03:06<02:14,  1.15s/it]                                                --------------------
+ 42%|████▏     | 83/200 [03:06<02:14,  1.15s/it] 42%|████▏     | 84/200 [03:06<03:21,  1.74s/it]                                                Ground Truth Answer: True
+ 42%|████▏     | 84/200 [03:06<03:21,  1.74s/it]                                                Ground Truth Answer: True
+ 42%|████▏     | 84/200 [03:13<03:21,  1.74s/it]                                                Model Answer: True
+ 42%|████▏     | 84/200 [03:13<03:21,  1.74s/it]                                                Is Correct: True
+ 42%|████▏     | 84/200 [03:13<03:21,  1.74s/it]                                                Correct Count: 43/85
+ 42%|████▏     | 84/200 [03:13<03:21,  1.74s/it]                                                --------------------
+ 42%|████▏     | 84/200 [03:13<03:21,  1.74s/it] 42%|████▎     | 85/200 [03:13<06:04,  3.17s/it]                                                Ground Truth Answer: False
+ 42%|████▎     | 85/200 [03:13<06:04,  3.17s/it]                                                Ground Truth Answer: False
+ 42%|████▎     | 85/200 [03:17<06:04,  3.17s/it]                                                Model Answer: False
+ 42%|████▎     | 85/200 [03:17<06:04,  3.17s/it]                                                Is Correct: True
+ 42%|████▎     | 85/200 [03:17<06:04,  3.17s/it]                                                Correct Count: 44/86
+ 42%|████▎     | 85/200 [03:17<06:04,  3.17s/it]                                                --------------------
+ 42%|████▎     | 85/200 [03:17<06:04,  3.17s/it] 43%|████▎     | 86/200 [03:17<07:00,  3.69s/it]                                                Ground Truth Answer: True
+ 43%|████▎     | 86/200 [03:17<07:00,  3.69s/it]                                                Ground Truth Answer: True
+ 43%|████▎     | 86/200 [03:24<07:00,  3.69s/it]                                                Model Answer: True
+ 43%|████▎     | 86/200 [03:24<07:00,  3.69s/it]                                                Is Correct: True
+ 43%|████▎     | 86/200 [03:24<07:00,  3.69s/it]                                                Correct Count: 45/87
+ 43%|████▎     | 86/200 [03:24<07:00,  3.69s/it]                                                --------------------
+ 43%|████▎     | 86/200 [03:24<07:00,  3.69s/it] 44%|████▎     | 87/200 [03:24<08:15,  4.39s/it]                                                Ground Truth Answer: False
+ 44%|████▎     | 87/200 [03:24<08:15,  4.39s/it]                                                Ground Truth Answer: False
+ 44%|████▎     | 87/200 [03:24<08:15,  4.39s/it]                                                Model Answer: None
+ 44%|████▎     | 87/200 [03:24<08:15,  4.39s/it]                                                Is Correct: False
+ 44%|████▎     | 87/200 [03:24<08:15,  4.39s/it]                                                Correct Count: 45/88
+ 44%|████▎     | 87/200 [03:24<08:15,  4.39s/it]                                                --------------------
+ 44%|████▎     | 87/200 [03:24<08:15,  4.39s/it] 44%|████▍     | 88/200 [03:24<05:58,  3.20s/it]                                                Ground Truth Answer: False
+ 44%|████▍     | 88/200 [03:24<05:58,  3.20s/it]                                                Ground Truth Answer: False
+ 44%|████▍     | 88/200 [03:27<05:58,  3.20s/it]                                                Model Answer: False
+ 44%|████▍     | 88/200 [03:27<05:58,  3.20s/it]                                                Is Correct: True
+ 44%|████▍     | 88/200 [03:27<05:58,  3.20s/it]                                                Correct Count: 46/89
+ 44%|████▍     | 88/200 [03:27<05:58,  3.20s/it]                                                --------------------
+ 44%|████▍     | 88/200 [03:27<05:58,  3.20s/it] 44%|████▍     | 89/200 [03:27<05:39,  3.05s/it]                                                Ground Truth Answer: False
+ 44%|████▍     | 89/200 [03:27<05:39,  3.05s/it]                                                Ground Truth Answer: False
+ 44%|████▍     | 89/200 [03:27<05:39,  3.05s/it]                                                Model Answer: False
+ 44%|████▍     | 89/200 [03:27<05:39,  3.05s/it]                                                Is Correct: True
+ 44%|████▍     | 89/200 [03:27<05:39,  3.05s/it]                                                Correct Count: 47/90
+ 44%|████▍     | 89/200 [03:27<05:39,  3.05s/it]                                                --------------------
+ 44%|████▍     | 89/200 [03:27<05:39,  3.05s/it] 45%|████▌     | 90/200 [03:27<04:00,  2.19s/it]                                                Ground Truth Answer: False
+ 45%|████▌     | 90/200 [03:27<04:00,  2.19s/it]                                                Ground Truth Answer: False
+ 45%|████▌     | 90/200 [03:29<04:00,  2.19s/it]                                                Model Answer: False
+ 45%|████▌     | 90/200 [03:29<04:00,  2.19s/it]                                                Is Correct: True
+ 45%|████▌     | 90/200 [03:29<04:00,  2.19s/it]                                                Correct Count: 48/91
+ 45%|████▌     | 90/200 [03:29<04:00,  2.19s/it]                                                --------------------
+ 45%|████▌     | 90/200 [03:29<04:00,  2.19s/it] 46%|████▌     | 91/200 [03:29<04:05,  2.25s/it]                                                Ground Truth Answer: True
+ 46%|████▌     | 91/200 [03:29<04:05,  2.25s/it]                                                Ground Truth Answer: True
+ 46%|████▌     | 91/200 [03:29<04:05,  2.25s/it]                                                Model Answer: None
+ 46%|████▌     | 91/200 [03:29<04:05,  2.25s/it]                                                Is Correct: False
+ 46%|████▌     | 91/200 [03:29<04:05,  2.25s/it]                                                Correct Count: 48/92
+ 46%|████▌     | 91/200 [03:29<04:05,  2.25s/it]                                                --------------------
+ 46%|████▌     | 91/200 [03:29<04:05,  2.25s/it] 46%|████▌     | 92/200 [03:29<02:55,  1.63s/it]                                                Ground Truth Answer: True
+ 46%|████▌     | 92/200 [03:29<02:55,  1.63s/it]                                                Ground Truth Answer: True
+ 46%|████▌     | 92/200 [03:33<02:55,  1.63s/it]                                                Model Answer: False
+ 46%|████▌     | 92/200 [03:33<02:55,  1.63s/it]                                                Is Correct: False
+ 46%|████▌     | 92/200 [03:33<02:55,  1.63s/it]                                                Correct Count: 48/93
+ 46%|████▌     | 92/200 [03:33<02:55,  1.63s/it]                                                --------------------
+ 46%|████▌     | 92/200 [03:33<02:55,  1.63s/it] 46%|████▋     | 93/200 [03:33<04:10,  2.34s/it]                                                Ground Truth Answer: False
+ 46%|████▋     | 93/200 [03:33<04:10,  2.34s/it]                                                Ground Truth Answer: False
+ 46%|████▋     | 93/200 [03:35<04:10,  2.34s/it]                                                Model Answer: False
+ 46%|████▋     | 93/200 [03:35<04:10,  2.34s/it]                                                Is Correct: True
+ 46%|████▋     | 93/200 [03:35<04:10,  2.34s/it]                                                Correct Count: 49/94
+ 46%|████▋     | 93/200 [03:35<04:10,  2.34s/it]                                                --------------------
+ 46%|████▋     | 93/200 [03:35<04:10,  2.34s/it] 47%|████▋     | 94/200 [03:35<03:54,  2.21s/it]                                                Ground Truth Answer: True
+ 47%|████▋     | 94/200 [03:35<03:54,  2.21s/it]                                                Ground Truth Answer: True
+ 47%|████▋     | 94/200 [03:36<03:54,  2.21s/it]                                                Model Answer: True
+ 47%|████▋     | 94/200 [03:36<03:54,  2.21s/it]                                                Is Correct: True
+ 47%|████▋     | 94/200 [03:36<03:54,  2.21s/it]                                                Correct Count: 50/95
+ 47%|████▋     | 94/200 [03:36<03:54,  2.21s/it]                                                --------------------
+ 47%|████▋     | 94/200 [03:36<03:54,  2.21s/it] 48%|████▊     | 95/200 [03:36<02:53,  1.66s/it]                                                Ground Truth Answer: False
+ 48%|████▊     | 95/200 [03:36<02:53,  1.66s/it]                                                Ground Truth Answer: False
+ 48%|████▊     | 95/200 [03:42<02:53,  1.66s/it]                                                Model Answer: True
+ 48%|████▊     | 95/200 [03:42<02:53,  1.66s/it]                                                Is Correct: False
+ 48%|████▊     | 95/200 [03:42<02:53,  1.66s/it]                                                Correct Count: 50/96
+ 48%|████▊     | 95/200 [03:42<02:53,  1.66s/it]                                                --------------------
+ 48%|████▊     | 95/200 [03:42<02:53,  1.66s/it] 48%|████▊     | 96/200 [03:42<05:02,  2.91s/it]                                                Ground Truth Answer: True
+ 48%|████▊     | 96/200 [03:42<05:02,  2.91s/it]                                                Ground Truth Answer: True
+ 48%|████▊     | 96/200 [03:43<05:02,  2.91s/it]                                                Model Answer: None
+ 48%|████▊     | 96/200 [03:43<05:02,  2.91s/it]                                                Is Correct: False
+ 48%|████▊     | 96/200 [03:43<05:02,  2.91s/it]                                                Correct Count: 50/97
+ 48%|████▊     | 96/200 [03:43<05:02,  2.91s/it]                                                --------------------
+ 48%|████▊     | 96/200 [03:43<05:02,  2.91s/it] 48%|████▊     | 97/200 [03:43<04:16,  2.49s/it]                                                Ground Truth Answer: False
+ 48%|████▊     | 97/200 [03:43<04:16,  2.49s/it]                                                Ground Truth Answer: False
+ 48%|████▊     | 97/200 [03:47<04:16,  2.49s/it]                                                Model Answer: False
+ 48%|████▊     | 97/200 [03:47<04:16,  2.49s/it]                                                Is Correct: True
+ 48%|████▊     | 97/200 [03:47<04:16,  2.49s/it]                                                Correct Count: 51/98
+ 48%|████▊     | 97/200 [03:47<04:16,  2.49s/it]                                                --------------------
+ 48%|████▊     | 97/200 [03:47<04:16,  2.49s/it] 49%|████▉     | 98/200 [03:47<05:12,  3.07s/it]                                                Ground Truth Answer: False
+ 49%|████▉     | 98/200 [03:47<05:12,  3.07s/it]                                                Ground Truth Answer: False
+ 49%|████▉     | 98/200 [03:48<05:12,  3.07s/it]                                                Model Answer: False
+ 49%|████▉     | 98/200 [03:48<05:12,  3.07s/it]                                                Is Correct: True
+ 49%|████▉     | 98/200 [03:48<05:12,  3.07s/it]                                                Correct Count: 52/99
+ 49%|████▉     | 98/200 [03:48<05:12,  3.07s/it]                                                --------------------
+ 49%|████▉     | 98/200 [03:48<05:12,  3.07s/it] 50%|████▉     | 99/200 [03:48<03:41,  2.20s/it]                                                Ground Truth Answer: True
+ 50%|████▉     | 99/200 [03:48<03:41,  2.20s/it]                                                Ground Truth Answer: True
+ 50%|████▉     | 99/200 [03:54<03:41,  2.20s/it]                                                Model Answer: True
+ 50%|████▉     | 99/200 [03:54<03:41,  2.20s/it]                                                Is Correct: True
+ 50%|████▉     | 99/200 [03:54<03:41,  2.20s/it]                                                Correct Count: 53/100
+ 50%|████▉     | 99/200 [03:54<03:41,  2.20s/it]                                                --------------------
+ 50%|████▉     | 99/200 [03:54<03:41,  2.20s/it] 50%|█████     | 100/200 [03:54<05:49,  3.50s/it]                                                 Ground Truth Answer: False
+ 50%|█████     | 100/200 [03:54<05:49,  3.50s/it]                                                 Ground Truth Answer: False
+ 50%|█████     | 100/200 [04:02<05:49,  3.50s/it]                                                 Model Answer: False
+ 50%|█████     | 100/200 [04:02<05:49,  3.50s/it]                                                 Is Correct: True
+ 50%|█████     | 100/200 [04:02<05:49,  3.50s/it]                                                 Correct Count: 54/101
+ 50%|█████     | 100/200 [04:02<05:49,  3.50s/it]                                                 --------------------
+ 50%|█████     | 100/200 [04:02<05:49,  3.50s/it] 50%|█████     | 101/200 [04:02<07:46,  4.71s/it]                                                 Ground Truth Answer: True
+ 50%|█████     | 101/200 [04:02<07:46,  4.71s/it]                                                 Ground Truth Answer: True
+ 50%|█████     | 101/200 [04:02<07:46,  4.71s/it]                                                 Model Answer: None
+ 50%|█████     | 101/200 [04:02<07:46,  4.71s/it]                                                 Is Correct: False
+ 50%|█████     | 101/200 [04:02<07:46,  4.71s/it]                                                 Correct Count: 54/102
+ 50%|█████     | 101/200 [04:02<07:46,  4.71s/it]                                                 --------------------
+ 50%|█████     | 101/200 [04:02<07:46,  4.71s/it] 51%|█████     | 102/200 [04:02<05:35,  3.43s/it]                                                 Ground Truth Answer: False
+ 51%|█████     | 102/200 [04:02<05:35,  3.43s/it]                                                 Ground Truth Answer: False
+ 51%|█████     | 102/200 [04:02<05:35,  3.43s/it]                                                 Model Answer: None
+ 51%|█████     | 102/200 [04:02<05:35,  3.43s/it]                                                 Is Correct: False
+ 51%|█████     | 102/200 [04:02<05:35,  3.43s/it]                                                 Correct Count: 54/103
+ 51%|█████     | 102/200 [04:02<05:35,  3.43s/it]                                                 --------------------
+ 51%|█████     | 102/200 [04:02<05:35,  3.43s/it] 52%|█████▏    | 103/200 [04:02<03:57,  2.45s/it]                                                 Ground Truth Answer: True
+ 52%|█████▏    | 103/200 [04:02<03:57,  2.45s/it]                                                 Ground Truth Answer: True
+ 52%|█████▏    | 103/200 [04:05<03:57,  2.45s/it]                                                 Model Answer: False
+ 52%|█████▏    | 103/200 [04:05<03:57,  2.45s/it]                                                 Is Correct: False
+ 52%|█████▏    | 103/200 [04:05<03:57,  2.45s/it]                                                 Correct Count: 54/104
+ 52%|█████▏    | 103/200 [04:05<03:57,  2.45s/it]                                                 --------------------
+ 52%|█████▏    | 103/200 [04:05<03:57,  2.45s/it] 52%|█████▏    | 104/200 [04:05<03:53,  2.43s/it]                                                 Ground Truth Answer: False
+ 52%|█████▏    | 104/200 [04:05<03:53,  2.43s/it]                                                 Ground Truth Answer: False
+ 52%|█████▏    | 104/200 [04:05<03:53,  2.43s/it]                                                 Model Answer: False
+ 52%|█████▏    | 104/200 [04:05<03:53,  2.43s/it]                                                 Is Correct: True
+ 52%|█████▏    | 104/200 [04:05<03:53,  2.43s/it]                                                 Correct Count: 55/105
+ 52%|█████▏    | 104/200 [04:05<03:53,  2.43s/it]                                                 --------------------
+ 52%|█████▏    | 104/200 [04:05<03:53,  2.43s/it] 52%|█████▎    | 105/200 [04:05<02:46,  1.75s/it]                                                 Ground Truth Answer: False
+ 52%|█████▎    | 105/200 [04:05<02:46,  1.75s/it]                                                 Ground Truth Answer: False
+ 52%|█████▎    | 105/200 [04:07<02:46,  1.75s/it]                                                 Model Answer: None
+ 52%|█████▎    | 105/200 [04:07<02:46,  1.75s/it]                                                 Is Correct: False
+ 52%|█████▎    | 105/200 [04:07<02:46,  1.75s/it]                                                 Correct Count: 55/106
+ 52%|█████▎    | 105/200 [04:07<02:46,  1.75s/it]                                                 --------------------
+ 52%|█████▎    | 105/200 [04:07<02:46,  1.75s/it] 53%|█████▎    | 106/200 [04:07<02:51,  1.82s/it]                                                 Ground Truth Answer: True
+ 53%|█████▎    | 106/200 [04:07<02:51,  1.82s/it]                                                 Ground Truth Answer: True
+ 53%|█████▎    | 106/200 [04:16<02:51,  1.82s/it]                                                 Model Answer: False
+ 53%|█████▎    | 106/200 [04:16<02:51,  1.82s/it]                                                 Is Correct: False
+ 53%|█████▎    | 106/200 [04:16<02:51,  1.82s/it]                                                 Correct Count: 55/107
+ 53%|█████▎    | 106/200 [04:16<02:51,  1.82s/it]                                                 --------------------
+ 53%|█████▎    | 106/200 [04:16<02:51,  1.82s/it] 54%|█████▎    | 107/200 [04:16<06:12,  4.00s/it]                                                 Ground Truth Answer: False
+ 54%|█████▎    | 107/200 [04:16<06:12,  4.00s/it]                                                 Ground Truth Answer: False
+ 54%|█████▎    | 107/200 [04:22<06:12,  4.00s/it]                                                 Model Answer: False
+ 54%|█████▎    | 107/200 [04:22<06:12,  4.00s/it]                                                 Is Correct: True
+ 54%|█████▎    | 107/200 [04:22<06:12,  4.00s/it]                                                 Correct Count: 56/108
+ 54%|█████▎    | 107/200 [04:22<06:12,  4.00s/it]                                                 --------------------
+ 54%|█████▎    | 107/200 [04:22<06:12,  4.00s/it] 54%|█████▍    | 108/200 [04:22<06:54,  4.51s/it]                                                 Ground Truth Answer: True
+ 54%|█████▍    | 108/200 [04:22<06:54,  4.51s/it]                                                 Ground Truth Answer: True
+ 54%|█████▍    | 108/200 [04:23<06:54,  4.51s/it]                                                 Model Answer: True
+ 54%|█████▍    | 108/200 [04:23<06:54,  4.51s/it]                                                 Is Correct: True
+ 54%|█████▍    | 108/200 [04:23<06:54,  4.51s/it]                                                 Correct Count: 57/109
+ 54%|█████▍    | 108/200 [04:23<06:54,  4.51s/it]                                                 --------------------
+ 54%|█████▍    | 108/200 [04:23<06:54,  4.51s/it] 55%|█████▍    | 109/200 [04:23<05:32,  3.66s/it]                                                 Ground Truth Answer: True
+ 55%|█████▍    | 109/200 [04:23<05:32,  3.66s/it]                                                 Ground Truth Answer: True
+ 55%|█████▍    | 109/200 [04:23<05:32,  3.66s/it]                                                 Model Answer: False
+ 55%|█████▍    | 109/200 [04:23<05:32,  3.66s/it]                                                 Is Correct: False
+ 55%|█████▍    | 109/200 [04:23<05:32,  3.66s/it]                                                 Correct Count: 57/110
+ 55%|█████▍    | 109/200 [04:23<05:32,  3.66s/it]                                                 --------------------
+ 55%|█████▍    | 109/200 [04:23<05:32,  3.66s/it] 55%|█████▌    | 110/200 [04:23<03:56,  2.62s/it]                                                 Ground Truth Answer: True
+ 55%|█████▌    | 110/200 [04:23<03:56,  2.62s/it]                                                 Ground Truth Answer: True
+ 55%|█████▌    | 110/200 [04:26<03:56,  2.62s/it]                                                 Model Answer: False
+ 55%|█████▌    | 110/200 [04:26<03:56,  2.62s/it]                                                 Is Correct: False
+ 55%|█████▌    | 110/200 [04:26<03:56,  2.62s/it]                                                 Correct Count: 57/111
+ 55%|█████▌    | 110/200 [04:26<03:56,  2.62s/it]                                                 --------------------
+ 55%|█████▌    | 110/200 [04:26<03:56,  2.62s/it] 56%|█████▌    | 111/200 [04:26<03:47,  2.56s/it]                                                 Ground Truth Answer: True
+ 56%|█████▌    | 111/200 [04:26<03:47,  2.56s/it]                                                 Ground Truth Answer: True
+ 56%|█████▌    | 111/200 [04:26<03:47,  2.56s/it]                                                 Model Answer: None
+ 56%|█████▌    | 111/200 [04:26<03:47,  2.56s/it]                                                 Is Correct: False
+ 56%|█████▌    | 111/200 [04:26<03:47,  2.56s/it]                                                 Correct Count: 57/112
+ 56%|█████▌    | 111/200 [04:26<03:47,  2.56s/it]                                                 --------------------
+ 56%|█████▌    | 111/200 [04:26<03:47,  2.56s/it] 56%|█████▌    | 112/200 [04:26<02:49,  1.92s/it]                                                 Ground Truth Answer: False
+ 56%|█████▌    | 112/200 [04:26<02:49,  1.92s/it]                                                 Ground Truth Answer: False
+ 56%|█████▌    | 112/200 [04:27<02:49,  1.92s/it]                                                 Model Answer: False
+ 56%|█████▌    | 112/200 [04:27<02:49,  1.92s/it]                                                 Is Correct: True
+ 56%|█████▌    | 112/200 [04:27<02:49,  1.92s/it]                                                 Correct Count: 58/113
+ 56%|█████▌    | 112/200 [04:27<02:49,  1.92s/it]                                                 --------------------
+ 56%|█████▌    | 112/200 [04:27<02:49,  1.92s/it] 56%|█████▋    | 113/200 [04:27<02:23,  1.65s/it]                                                 Ground Truth Answer: True
+ 56%|█████▋    | 113/200 [04:27<02:23,  1.65s/it]                                                 Ground Truth Answer: True
+ 56%|█████▋    | 113/200 [04:28<02:23,  1.65s/it]                                                 Model Answer: False
+ 56%|█████▋    | 113/200 [04:28<02:23,  1.65s/it]                                                 Is Correct: False
+ 56%|█████▋    | 113/200 [04:28<02:23,  1.65s/it]                                                 Correct Count: 58/114
+ 56%|█████▋    | 113/200 [04:28<02:23,  1.65s/it]                                                 --------------------
+ 56%|█████▋    | 113/200 [04:28<02:23,  1.65s/it] 57%|█████▋    | 114/200 [04:28<01:53,  1.32s/it]                                                 Ground Truth Answer: True
+ 57%|█████▋    | 114/200 [04:28<01:53,  1.32s/it]                                                 Ground Truth Answer: True
+ 57%|█████▋    | 114/200 [04:33<01:53,  1.32s/it]                                                 Model Answer: None
+ 57%|█████▋    | 114/200 [04:33<01:53,  1.32s/it]                                                 Is Correct: False
+ 57%|█████▋    | 114/200 [04:33<01:53,  1.32s/it]                                                 Correct Count: 58/115
+ 57%|█████▋    | 114/200 [04:33<01:53,  1.32s/it]                                                 --------------------
+ 57%|█████▋    | 114/200 [04:33<01:53,  1.32s/it] 57%|█████▊    | 115/200 [04:33<03:31,  2.49s/it]                                                 Ground Truth Answer: True
+ 57%|█████▊    | 115/200 [04:33<03:31,  2.49s/it]                                                 Ground Truth Answer: True
+ 57%|█████▊    | 115/200 [04:35<03:31,  2.49s/it]                                                 Model Answer: False
+ 57%|█████▊    | 115/200 [04:35<03:31,  2.49s/it]                                                 Is Correct: False
+ 57%|█████▊    | 115/200 [04:35<03:31,  2.49s/it]                                                 Correct Count: 58/116
+ 57%|█████▊    | 115/200 [04:35<03:31,  2.49s/it]                                                 --------------------
+ 57%|█████▊    | 115/200 [04:35<03:31,  2.49s/it] 58%|█████▊    | 116/200 [04:35<03:05,  2.21s/it]                                                 Ground Truth Answer: False
+ 58%|█████▊    | 116/200 [04:35<03:05,  2.21s/it]                                                 Ground Truth Answer: False
+ 58%|█████▊    | 116/200 [04:35<03:05,  2.21s/it]                                                 Model Answer: False
+ 58%|█████▊    | 116/200 [04:35<03:05,  2.21s/it]                                                 Is Correct: True
+ 58%|█████▊    | 116/200 [04:35<03:05,  2.21s/it]                                                 Correct Count: 59/117
+ 58%|█████▊    | 116/200 [04:35<03:05,  2.21s/it]                                                 --------------------
+ 58%|█████▊    | 116/200 [04:35<03:05,  2.21s/it] 58%|█████▊    | 117/200 [04:35<02:12,  1.59s/it]                                                 Ground Truth Answer: False
+ 58%|█████▊    | 117/200 [04:35<02:12,  1.59s/it]                                                 Ground Truth Answer: False
+ 58%|█████▊    | 117/200 [04:39<02:12,  1.59s/it]                                                 Model Answer: False
+ 58%|█████▊    | 117/200 [04:39<02:12,  1.59s/it]                                                 Is Correct: True
+ 58%|█████▊    | 117/200 [04:39<02:12,  1.59s/it]                                                 Correct Count: 60/118
+ 58%|█████▊    | 117/200 [04:39<02:12,  1.59s/it]                                                 --------------------
+ 58%|█████▊    | 117/200 [04:39<02:12,  1.59s/it] 59%|█████▉    | 118/200 [04:39<03:26,  2.52s/it]                                                 Ground Truth Answer: True
+ 59%|█████▉    | 118/200 [04:39<03:26,  2.52s/it]                                                 Ground Truth Answer: True
+ 59%|█████▉    | 118/200 [04:42<03:26,  2.52s/it]                                                 Model Answer: False
+ 59%|█████▉    | 118/200 [04:42<03:26,  2.52s/it]                                                 Is Correct: False
+ 59%|█████▉    | 118/200 [04:42<03:26,  2.52s/it]                                                 Correct Count: 60/119
+ 59%|█████▉    | 118/200 [04:42<03:26,  2.52s/it]                                                 --------------------
+ 59%|█████▉    | 118/200 [04:42<03:26,  2.52s/it] 60%|█████▉    | 119/200 [04:42<03:27,  2.56s/it]                                                 Ground Truth Answer: False
+ 60%|█████▉    | 119/200 [04:42<03:27,  2.56s/it]                                                 Ground Truth Answer: False
+ 60%|█████▉    | 119/200 [04:44<03:27,  2.56s/it]                                                 Model Answer: False
+ 60%|█████▉    | 119/200 [04:44<03:27,  2.56s/it]                                                 Is Correct: True
+ 60%|█████▉    | 119/200 [04:44<03:27,  2.56s/it]                                                 Correct Count: 61/120
+ 60%|█████▉    | 119/200 [04:44<03:27,  2.56s/it]                                                 --------------------
+ 60%|█████▉    | 119/200 [04:44<03:27,  2.56s/it] 60%|██████    | 120/200 [04:44<03:11,  2.40s/it]                                                 Ground Truth Answer: True
+ 60%|██████    | 120/200 [04:44<03:11,  2.40s/it]                                                 Ground Truth Answer: True
+ 60%|██████    | 120/200 [04:45<03:11,  2.40s/it]                                                 Model Answer: True
+ 60%|██████    | 120/200 [04:45<03:11,  2.40s/it]                                                 Is Correct: True
+ 60%|██████    | 120/200 [04:45<03:11,  2.40s/it]                                                 Correct Count: 62/121
+ 60%|██████    | 120/200 [04:45<03:11,  2.40s/it]                                                 --------------------
+ 60%|██████    | 120/200 [04:45<03:11,  2.40s/it] 60%|██████    | 121/200 [04:45<02:22,  1.81s/it]                                                 Ground Truth Answer: False
+ 60%|██████    | 121/200 [04:45<02:22,  1.81s/it]                                                 Ground Truth Answer: False
+ 60%|██████    | 121/200 [04:47<02:22,  1.81s/it]                                                 Model Answer: False
+ 60%|██████    | 121/200 [04:47<02:22,  1.81s/it]                                                 Is Correct: True
+ 60%|██████    | 121/200 [04:47<02:22,  1.81s/it]                                                 Correct Count: 63/122
+ 60%|██████    | 121/200 [04:47<02:22,  1.81s/it]                                                 --------------------
+ 60%|██████    | 121/200 [04:47<02:22,  1.81s/it] 61%|██████    | 122/200 [04:47<02:33,  1.97s/it]                                                 Ground Truth Answer: True
+ 61%|██████    | 122/200 [04:47<02:33,  1.97s/it]                                                 Ground Truth Answer: True
+ 61%|██████    | 122/200 [04:47<02:33,  1.97s/it]                                                 Model Answer: False
+ 61%|██████    | 122/200 [04:47<02:33,  1.97s/it]                                                 Is Correct: False
+ 61%|██████    | 122/200 [04:47<02:33,  1.97s/it]                                                 Correct Count: 63/123
+ 61%|██████    | 122/200 [04:47<02:33,  1.97s/it]                                                 --------------------
+ 61%|██████    | 122/200 [04:47<02:33,  1.97s/it] 62%|██████▏   | 123/200 [04:47<01:49,  1.42s/it]                                                 Ground Truth Answer: True
+ 62%|██████▏   | 123/200 [04:47<01:49,  1.42s/it]                                                 Ground Truth Answer: True
+ 62%|██████▏   | 123/200 [04:49<01:49,  1.42s/it]                                                 Model Answer: False
+ 62%|██████▏   | 123/200 [04:49<01:49,  1.42s/it]                                                 Is Correct: False
+ 62%|██████▏   | 123/200 [04:49<01:49,  1.42s/it]                                                 Correct Count: 63/124
+ 62%|██████▏   | 123/200 [04:49<01:49,  1.42s/it]                                                 --------------------
+ 62%|██████▏   | 123/200 [04:49<01:49,  1.42s/it] 62%|██████▏   | 124/200 [04:49<02:03,  1.62s/it]                                                 Ground Truth Answer: False
+ 62%|██████▏   | 124/200 [04:49<02:03,  1.62s/it]                                                 Ground Truth Answer: False
+ 62%|██████▏   | 124/200 [04:58<02:03,  1.62s/it]                                                 Model Answer: False
+ 62%|██████▏   | 124/200 [04:58<02:03,  1.62s/it]                                                 Is Correct: True
+ 62%|██████▏   | 124/200 [04:58<02:03,  1.62s/it]                                                 Correct Count: 64/125
+ 62%|██████▏   | 124/200 [04:58<02:03,  1.62s/it]                                                 --------------------
+ 62%|██████▏   | 124/200 [04:58<02:03,  1.62s/it] 62%|██████▎   | 125/200 [04:58<04:44,  3.79s/it]                                                 Ground Truth Answer: True
+ 62%|██████▎   | 125/200 [04:58<04:44,  3.79s/it]                                                 Ground Truth Answer: True
+ 62%|██████▎   | 125/200 [04:58<04:44,  3.79s/it]                                                 Model Answer: False
+ 62%|██████▎   | 125/200 [04:58<04:44,  3.79s/it]                                                 Is Correct: False
+ 62%|██████▎   | 125/200 [04:58<04:44,  3.79s/it]                                                 Correct Count: 64/126
+ 62%|██████▎   | 125/200 [04:58<04:44,  3.79s/it]                                                 --------------------
+ 62%|██████▎   | 125/200 [04:58<04:44,  3.79s/it] 63%|██████▎   | 126/200 [04:58<03:21,  2.72s/it]                                                 Ground Truth Answer: True
+ 63%|██████▎   | 126/200 [04:58<03:21,  2.72s/it]                                                 Ground Truth Answer: True
+ 63%|██████▎   | 126/200 [04:59<03:21,  2.72s/it]                                                 Model Answer: None
+ 63%|██████▎   | 126/200 [04:59<03:21,  2.72s/it]                                                 Is Correct: False
+ 63%|██████▎   | 126/200 [04:59<03:21,  2.72s/it]                                                 Correct Count: 64/127
+ 63%|██████▎   | 126/200 [04:59<03:21,  2.72s/it]                                                 --------------------
+ 63%|██████▎   | 126/200 [04:59<03:21,  2.72s/it] 64%|██████▎   | 127/200 [04:59<02:35,  2.13s/it]                                                 Ground Truth Answer: True
+ 64%|██████▎   | 127/200 [04:59<02:35,  2.13s/it]                                                 Ground Truth Answer: True
+ 64%|██████▎   | 127/200 [05:02<02:35,  2.13s/it]                                                 Model Answer: False
+ 64%|██████▎   | 127/200 [05:02<02:35,  2.13s/it]                                                 Is Correct: False
+ 64%|██████▎   | 127/200 [05:02<02:35,  2.13s/it]                                                 Correct Count: 64/128
+ 64%|██████▎   | 127/200 [05:02<02:35,  2.13s/it]                                                 --------------------
+ 64%|██████▎   | 127/200 [05:02<02:35,  2.13s/it] 64%|██████▍   | 128/200 [05:02<02:54,  2.43s/it]                                                 Ground Truth Answer: True
+ 64%|██████▍   | 128/200 [05:02<02:54,  2.43s/it]                                                 Ground Truth Answer: True
+ 64%|██████▍   | 128/200 [05:05<02:54,  2.43s/it]                                                 Model Answer: False
+ 64%|██████▍   | 128/200 [05:05<02:54,  2.43s/it]                                                 Is Correct: False
+ 64%|██████▍   | 128/200 [05:05<02:54,  2.43s/it]                                                 Correct Count: 64/129
+ 64%|██████▍   | 128/200 [05:05<02:54,  2.43s/it]                                                 --------------------
+ 64%|██████▍   | 128/200 [05:05<02:54,  2.43s/it] 64%|██████▍   | 129/200 [05:05<03:08,  2.66s/it]                                                 Ground Truth Answer: True
+ 64%|██████▍   | 129/200 [05:05<03:08,  2.66s/it]                                                 Ground Truth Answer: True
+ 64%|██████▍   | 129/200 [05:09<03:08,  2.66s/it]                                                 Model Answer: True
+ 64%|██████▍   | 129/200 [05:09<03:08,  2.66s/it]                                                 Is Correct: True
+ 64%|██████▍   | 129/200 [05:09<03:08,  2.66s/it]                                                 Correct Count: 65/130
+ 64%|██████▍   | 129/200 [05:09<03:08,  2.66s/it]                                                 --------------------
+ 64%|██████▍   | 129/200 [05:09<03:08,  2.66s/it] 65%|██████▌   | 130/200 [05:09<03:26,  2.94s/it]                                                 Ground Truth Answer: False
+ 65%|██████▌   | 130/200 [05:09<03:26,  2.94s/it]                                                 Ground Truth Answer: False
+ 65%|██████▌   | 130/200 [05:09<03:26,  2.94s/it]                                                 Model Answer: None
+ 65%|██████▌   | 130/200 [05:09<03:26,  2.94s/it]                                                 Is Correct: False
+ 65%|██████▌   | 130/200 [05:09<03:26,  2.94s/it]                                                 Correct Count: 65/131
+ 65%|██████▌   | 130/200 [05:09<03:26,  2.94s/it]                                                 --------------------
+ 65%|██████▌   | 130/200 [05:09<03:26,  2.94s/it] 66%|██████▌   | 131/200 [05:09<02:24,  2.10s/it]                                                 Ground Truth Answer: False
+ 66%|██████▌   | 131/200 [05:09<02:24,  2.10s/it]                                                 Ground Truth Answer: False
+ 66%|██████▌   | 131/200 [05:16<02:24,  2.10s/it]                                                 Model Answer: False
+ 66%|██████▌   | 131/200 [05:16<02:24,  2.10s/it]                                                 Is Correct: True
+ 66%|██████▌   | 131/200 [05:16<02:24,  2.10s/it]                                                 Correct Count: 66/132
+ 66%|██████▌   | 131/200 [05:16<02:24,  2.10s/it]                                                 --------------------
+ 66%|██████▌   | 131/200 [05:16<02:24,  2.10s/it] 66%|██████▌   | 132/200 [05:16<04:02,  3.57s/it]                                                 Ground Truth Answer: True
+ 66%|██████▌   | 132/200 [05:16<04:02,  3.57s/it]                                                 Ground Truth Answer: True
+ 66%|██████▌   | 132/200 [05:16<04:02,  3.57s/it]                                                 Model Answer: False
+ 66%|██████▌   | 132/200 [05:16<04:02,  3.57s/it]                                                 Is Correct: False
+ 66%|██████▌   | 132/200 [05:16<04:02,  3.57s/it]                                                 Correct Count: 66/133
+ 66%|██████▌   | 132/200 [05:16<04:02,  3.57s/it]                                                 --------------------
+ 66%|██████▌   | 132/200 [05:16<04:02,  3.57s/it] 66%|██████▋   | 133/200 [05:16<02:56,  2.63s/it]                                                 Ground Truth Answer: True
+ 66%|██████▋   | 133/200 [05:16<02:56,  2.63s/it]                                                 Ground Truth Answer: True
+ 66%|██████▋   | 133/200 [05:18<02:56,  2.63s/it]                                                 Model Answer: False
+ 66%|██████▋   | 133/200 [05:18<02:56,  2.63s/it]                                                 Is Correct: False
+ 66%|██████▋   | 133/200 [05:18<02:56,  2.63s/it]                                                 Correct Count: 66/134
+ 66%|██████▋   | 133/200 [05:18<02:56,  2.63s/it]                                                 --------------------
+ 66%|██████▋   | 133/200 [05:18<02:56,  2.63s/it] 67%|██████▋   | 134/200 [05:18<02:36,  2.37s/it]                                                 Ground Truth Answer: True
+ 67%|██████▋   | 134/200 [05:18<02:36,  2.37s/it]                                                 Ground Truth Answer: True
+ 67%|██████▋   | 134/200 [05:23<02:36,  2.37s/it]                                                 Model Answer: False
+ 67%|██████▋   | 134/200 [05:23<02:36,  2.37s/it]                                                 Is Correct: False
+ 67%|██████▋   | 134/200 [05:23<02:36,  2.37s/it]                                                 Correct Count: 66/135
+ 67%|██████▋   | 134/200 [05:23<02:36,  2.37s/it]                                                 --------------------
+ 67%|██████▋   | 134/200 [05:23<02:36,  2.37s/it] 68%|██████▊   | 135/200 [05:23<03:18,  3.05s/it]                                                 Ground Truth Answer: False
+ 68%|██████▊   | 135/200 [05:23<03:18,  3.05s/it]                                                 Ground Truth Answer: False
+ 68%|██████▊   | 135/200 [05:23<03:18,  3.05s/it]                                                 Model Answer: False
+ 68%|██████▊   | 135/200 [05:23<03:18,  3.05s/it]                                                 Is Correct: True
+ 68%|██████▊   | 135/200 [05:23<03:18,  3.05s/it]                                                 Correct Count: 67/136
+ 68%|██████▊   | 135/200 [05:23<03:18,  3.05s/it]                                                 --------------------
+ 68%|██████▊   | 135/200 [05:23<03:18,  3.05s/it] 68%|██████▊   | 136/200 [05:23<02:19,  2.18s/it]                                                 Ground Truth Answer: False
+ 68%|██████▊   | 136/200 [05:23<02:19,  2.18s/it]                                                 Ground Truth Answer: False
+ 68%|██████▊   | 136/200 [05:26<02:19,  2.18s/it]                                                 Model Answer: False
+ 68%|██████▊   | 136/200 [05:26<02:19,  2.18s/it]                                                 Is Correct: True
+ 68%|██████▊   | 136/200 [05:26<02:19,  2.18s/it]                                                 Correct Count: 68/137
+ 68%|██████▊   | 136/200 [05:26<02:19,  2.18s/it]                                                 --------------------
+ 68%|██████▊   | 136/200 [05:26<02:19,  2.18s/it] 68%|██████▊   | 137/200 [05:26<02:29,  2.38s/it]                                                 Ground Truth Answer: True
+ 68%|██████▊   | 137/200 [05:26<02:29,  2.38s/it]                                                 Ground Truth Answer: True
+ 68%|██████▊   | 137/200 [05:28<02:29,  2.38s/it]                                                 Model Answer: True
+ 68%|██████▊   | 137/200 [05:28<02:29,  2.38s/it]                                                 Is Correct: True
+ 68%|██████▊   | 137/200 [05:28<02:29,  2.38s/it]                                                 Correct Count: 69/138
+ 68%|██████▊   | 137/200 [05:28<02:29,  2.38s/it]                                                 --------------------
+ 68%|██████▊   | 137/200 [05:28<02:29,  2.38s/it] 69%|██████▉   | 138/200 [05:28<02:28,  2.39s/it]                                                 Ground Truth Answer: True
+ 69%|██████▉   | 138/200 [05:28<02:28,  2.39s/it]                                                 Ground Truth Answer: True
+ 69%|██████▉   | 138/200 [05:30<02:28,  2.39s/it]                                                 Model Answer: None
+ 69%|██████▉   | 138/200 [05:30<02:28,  2.39s/it]                                                 Is Correct: False
+ 69%|██████▉   | 138/200 [05:30<02:28,  2.39s/it]                                                 Correct Count: 69/139
+ 69%|██████▉   | 138/200 [05:30<02:28,  2.39s/it]                                                 --------------------
+ 69%|██████▉   | 138/200 [05:30<02:28,  2.39s/it] 70%|██████▉   | 139/200 [05:30<02:12,  2.18s/it]                                                 Ground Truth Answer: False
+ 70%|██████▉   | 139/200 [05:30<02:12,  2.18s/it]                                                 Ground Truth Answer: False
+ 70%|██████▉   | 139/200 [05:32<02:12,  2.18s/it]                                                 Model Answer: False
+ 70%|██████▉   | 139/200 [05:32<02:12,  2.18s/it]                                                 Is Correct: True
+ 70%|██████▉   | 139/200 [05:32<02:12,  2.18s/it]                                                 Correct Count: 70/140
+ 70%|██████▉   | 139/200 [05:32<02:12,  2.18s/it]                                                 --------------------
+ 70%|██████▉   | 139/200 [05:32<02:12,  2.18s/it] 70%|███████   | 140/200 [05:32<02:08,  2.15s/it]                                                 Ground Truth Answer: True
+ 70%|███████   | 140/200 [05:32<02:08,  2.15s/it]                                                 Ground Truth Answer: True
+ 70%|███████   | 140/200 [05:33<02:08,  2.15s/it]                                                 Model Answer: None
+ 70%|███████   | 140/200 [05:33<02:08,  2.15s/it]                                                 Is Correct: False
+ 70%|███████   | 140/200 [05:33<02:08,  2.15s/it]                                                 Correct Count: 70/141
+ 70%|███████   | 140/200 [05:33<02:08,  2.15s/it]                                                 --------------------
+ 70%|███████   | 140/200 [05:33<02:08,  2.15s/it] 70%|███████   | 141/200 [05:33<01:36,  1.64s/it]                                                 Ground Truth Answer: False
+ 70%|███████   | 141/200 [05:33<01:36,  1.64s/it]                                                 Ground Truth Answer: False
+ 70%|███████   | 141/200 [05:34<01:36,  1.64s/it]                                                 Model Answer: False
+ 70%|███████   | 141/200 [05:34<01:36,  1.64s/it]                                                 Is Correct: True
+ 70%|███████   | 141/200 [05:34<01:36,  1.64s/it]                                                 Correct Count: 71/142
+ 70%|███████   | 141/200 [05:34<01:36,  1.64s/it]                                                 --------------------
+ 70%|███████   | 141/200 [05:34<01:36,  1.64s/it] 71%|███████   | 142/200 [05:34<01:34,  1.62s/it]                                                 Ground Truth Answer: True
+ 71%|███████   | 142/200 [05:34<01:34,  1.62s/it]                                                 Ground Truth Answer: True
+ 71%|███████   | 142/200 [05:34<01:34,  1.62s/it]                                                 Model Answer: None
+ 71%|███████   | 142/200 [05:34<01:34,  1.62s/it]                                                 Is Correct: False
+ 71%|███████   | 142/200 [05:34<01:34,  1.62s/it]                                                 Correct Count: 71/143
+ 71%|███████   | 142/200 [05:34<01:34,  1.62s/it]                                                 --------------------
+ 71%|███████   | 142/200 [05:34<01:34,  1.62s/it] 72%|███████▏  | 143/200 [05:34<01:07,  1.19s/it]                                                 Ground Truth Answer: False
+ 72%|███████▏  | 143/200 [05:34<01:07,  1.19s/it]                                                 Ground Truth Answer: False
+ 72%|███████▏  | 143/200 [05:35<01:07,  1.19s/it]                                                 Model Answer: None
+ 72%|███████▏  | 143/200 [05:35<01:07,  1.19s/it]                                                 Is Correct: False
+ 72%|███████▏  | 143/200 [05:35<01:07,  1.19s/it]                                                 Correct Count: 71/144
+ 72%|███████▏  | 143/200 [05:35<01:07,  1.19s/it]                                                 --------------------
+ 72%|███████▏  | 143/200 [05:35<01:07,  1.19s/it] 72%|███████▏  | 144/200 [05:35<00:53,  1.04it/s]                                                 Ground Truth Answer: True
+ 72%|███████▏  | 144/200 [05:35<00:53,  1.04it/s]                                                 Ground Truth Answer: True
+ 72%|███████▏  | 144/200 [05:36<00:53,  1.04it/s]                                                 Model Answer: False
+ 72%|███████▏  | 144/200 [05:36<00:53,  1.04it/s]                                                 Is Correct: False
+ 72%|███████▏  | 144/200 [05:36<00:53,  1.04it/s]                                                 Correct Count: 71/145
+ 72%|███████▏  | 144/200 [05:36<00:53,  1.04it/s]                                                 --------------------
+ 72%|███████▏  | 144/200 [05:36<00:53,  1.04it/s] 72%|███████▎  | 145/200 [05:36<01:05,  1.19s/it]                                                 Ground Truth Answer: True
+ 72%|███████▎  | 145/200 [05:36<01:05,  1.19s/it]                                                 Ground Truth Answer: True
+ 72%|███████▎  | 145/200 [05:37<01:05,  1.19s/it]                                                 Model Answer: None
+ 72%|███████▎  | 145/200 [05:37<01:05,  1.19s/it]                                                 Is Correct: False
+ 72%|███████▎  | 145/200 [05:37<01:05,  1.19s/it]                                                 Correct Count: 71/146
+ 72%|███████▎  | 145/200 [05:37<01:05,  1.19s/it]                                                 --------------------
+ 72%|███████▎  | 145/200 [05:37<01:05,  1.19s/it] 73%|███████▎  | 146/200 [05:37<00:51,  1.04it/s]                                                 Ground Truth Answer: True
+ 73%|███████▎  | 146/200 [05:37<00:51,  1.04it/s]                                                 Ground Truth Answer: True
+ 73%|███████▎  | 146/200 [05:44<00:51,  1.04it/s]                                                 Model Answer: False
+ 73%|███████▎  | 146/200 [05:44<00:51,  1.04it/s]                                                 Is Correct: False
+ 73%|███████▎  | 146/200 [05:44<00:51,  1.04it/s]                                                 Correct Count: 71/147
+ 73%|███████▎  | 146/200 [05:44<00:51,  1.04it/s]                                                 --------------------
+ 73%|███████▎  | 146/200 [05:44<00:51,  1.04it/s] 74%|███████▎  | 147/200 [05:44<02:27,  2.78s/it]                                                 Ground Truth Answer: True
+ 74%|███████▎  | 147/200 [05:44<02:27,  2.78s/it]                                                 Ground Truth Answer: True
+ 74%|███████▎  | 147/200 [05:44<02:27,  2.78s/it]                                                 Model Answer: False
+ 74%|███████▎  | 147/200 [05:44<02:27,  2.78s/it]                                                 Is Correct: False
+ 74%|███████▎  | 147/200 [05:44<02:27,  2.78s/it]                                                 Correct Count: 71/148
+ 74%|███████▎  | 147/200 [05:44<02:27,  2.78s/it]                                                 --------------------
+ 74%|███████▎  | 147/200 [05:44<02:27,  2.78s/it] 74%|███████▍  | 148/200 [05:44<01:43,  2.00s/it]                                                 Ground Truth Answer: False
+ 74%|███████▍  | 148/200 [05:44<01:43,  2.00s/it]                                                 Ground Truth Answer: False
+ 74%|███████▍  | 148/200 [05:46<01:43,  2.00s/it]                                                 Model Answer: False
+ 74%|███████▍  | 148/200 [05:46<01:43,  2.00s/it]                                                 Is Correct: True
+ 74%|███████▍  | 148/200 [05:46<01:43,  2.00s/it]                                                 Correct Count: 72/149
+ 74%|███████▍  | 148/200 [05:46<01:43,  2.00s/it]                                                 --------------------
+ 74%|███████▍  | 148/200 [05:46<01:43,  2.00s/it] 74%|███████▍  | 149/200 [05:46<01:35,  1.86s/it]                                                 Ground Truth Answer: True
+ 74%|███████▍  | 149/200 [05:46<01:35,  1.86s/it]                                                 Ground Truth Answer: True
+ 74%|███████▍  | 149/200 [05:47<01:35,  1.86s/it]                                                 Model Answer: False
+ 74%|███████▍  | 149/200 [05:47<01:35,  1.86s/it]                                                 Is Correct: False
+ 74%|███████▍  | 149/200 [05:47<01:35,  1.86s/it]                                                 Correct Count: 72/150
+ 74%|███████▍  | 149/200 [05:47<01:35,  1.86s/it]                                                 --------------------
+ 74%|███████▍  | 149/200 [05:47<01:35,  1.86s/it] 75%|███████▌  | 150/200 [05:47<01:21,  1.64s/it]                                                 Ground Truth Answer: False
+ 75%|███████▌  | 150/200 [05:47<01:21,  1.64s/it]                                                 Ground Truth Answer: False
+ 75%|███████▌  | 150/200 [05:48<01:21,  1.64s/it]                                                 Model Answer: None
+ 75%|███████▌  | 150/200 [05:48<01:21,  1.64s/it]                                                 Is Correct: False
+ 75%|███████▌  | 150/200 [05:48<01:21,  1.64s/it]                                                 Correct Count: 72/151
+ 75%|███████▌  | 150/200 [05:48<01:21,  1.64s/it]                                                 --------------------
+ 75%|███████▌  | 150/200 [05:48<01:21,  1.64s/it] 76%|███████▌  | 151/200 [05:48<01:14,  1.52s/it]                                                 Ground Truth Answer: True
+ 76%|███████▌  | 151/200 [05:48<01:14,  1.52s/it]                                                 Ground Truth Answer: True
+ 76%|███████▌  | 151/200 [05:50<01:14,  1.52s/it]                                                 Model Answer: False
+ 76%|███████▌  | 151/200 [05:50<01:14,  1.52s/it]                                                 Is Correct: False
+ 76%|███████▌  | 151/200 [05:50<01:14,  1.52s/it]                                                 Correct Count: 72/152
+ 76%|███████▌  | 151/200 [05:50<01:14,  1.52s/it]                                                 --------------------
+ 76%|███████▌  | 151/200 [05:50<01:14,  1.52s/it] 76%|███████▌  | 152/200 [05:50<01:15,  1.57s/it]                                                 Ground Truth Answer: False
+ 76%|███████▌  | 152/200 [05:50<01:15,  1.57s/it]                                                 Ground Truth Answer: False
+ 76%|███████▌  | 152/200 [05:58<01:15,  1.57s/it]                                                 Model Answer: False
+ 76%|███████▌  | 152/200 [05:58<01:15,  1.57s/it]                                                 Is Correct: True
+ 76%|███████▌  | 152/200 [05:58<01:15,  1.57s/it]                                                 Correct Count: 73/153
+ 76%|███████▌  | 152/200 [05:58<01:15,  1.57s/it]                                                 --------------------
+ 76%|███████▌  | 152/200 [05:58<01:15,  1.57s/it] 76%|███████▋  | 153/200 [05:58<02:50,  3.63s/it]                                                 Ground Truth Answer: False
+ 76%|███████▋  | 153/200 [05:58<02:50,  3.63s/it]                                                 Ground Truth Answer: False
+ 76%|███████▋  | 153/200 [06:01<02:50,  3.63s/it]                                                 Model Answer: False
+ 76%|███████▋  | 153/200 [06:01<02:50,  3.63s/it]                                                 Is Correct: True
+ 76%|███████▋  | 153/200 [06:01<02:50,  3.63s/it]                                                 Correct Count: 74/154
+ 76%|███████▋  | 153/200 [06:01<02:50,  3.63s/it]                                                 --------------------
+ 76%|███████▋  | 153/200 [06:01<02:50,  3.63s/it] 77%|███████▋  | 154/200 [06:01<02:42,  3.54s/it]                                                 Ground Truth Answer: True
+ 77%|███████▋  | 154/200 [06:01<02:42,  3.54s/it]                                                 Ground Truth Answer: True
+ 77%|███████▋  | 154/200 [06:04<02:42,  3.54s/it]                                                 Model Answer: True
+ 77%|███████▋  | 154/200 [06:04<02:42,  3.54s/it]                                                 Is Correct: True
+ 77%|███████▋  | 154/200 [06:04<02:42,  3.54s/it]                                                 Correct Count: 75/155
+ 77%|███████▋  | 154/200 [06:04<02:42,  3.54s/it]                                                 --------------------
+ 77%|███████▋  | 154/200 [06:04<02:42,  3.54s/it] 78%|███████▊  | 155/200 [06:04<02:26,  3.26s/it]                                                 Ground Truth Answer: True
+ 78%|███████▊  | 155/200 [06:04<02:26,  3.26s/it]                                                 Ground Truth Answer: True
+ 78%|███████▊  | 155/200 [06:06<02:26,  3.26s/it]                                                 Model Answer: True
+ 78%|███████▊  | 155/200 [06:06<02:26,  3.26s/it]                                                 Is Correct: True
+ 78%|███████▊  | 155/200 [06:06<02:26,  3.26s/it]                                                 Correct Count: 76/156
+ 78%|███████▊  | 155/200 [06:06<02:26,  3.26s/it]                                                 --------------------
+ 78%|███████▊  | 155/200 [06:06<02:26,  3.26s/it] 78%|███████▊  | 156/200 [06:06<02:06,  2.89s/it]                                                 Ground Truth Answer: False
+ 78%|███████▊  | 156/200 [06:06<02:06,  2.89s/it]                                                 Ground Truth Answer: False
+ 78%|███████▊  | 156/200 [06:12<02:06,  2.89s/it]                                                 Model Answer: False
+ 78%|███████▊  | 156/200 [06:12<02:06,  2.89s/it]                                                 Is Correct: True
+ 78%|███████▊  | 156/200 [06:12<02:06,  2.89s/it]                                                 Correct Count: 77/157
+ 78%|███████▊  | 156/200 [06:12<02:06,  2.89s/it]                                                 --------------------
+ 78%|███████▊  | 156/200 [06:12<02:06,  2.89s/it] 78%|███████▊  | 157/200 [06:12<02:50,  3.96s/it]                                                 Ground Truth Answer: False
+ 78%|███████▊  | 157/200 [06:12<02:50,  3.96s/it]                                                 Ground Truth Answer: False
+ 78%|███████▊  | 157/200 [06:14<02:50,  3.96s/it]                                                 Model Answer: False
+ 78%|███████▊  | 157/200 [06:14<02:50,  3.96s/it]                                                 Is Correct: True
+ 78%|███████▊  | 157/200 [06:14<02:50,  3.96s/it]                                                 Correct Count: 78/158
+ 78%|███████▊  | 157/200 [06:14<02:50,  3.96s/it]                                                 --------------------
+ 78%|███████▊  | 157/200 [06:14<02:50,  3.96s/it] 79%|███████▉  | 158/200 [06:14<02:18,  3.30s/it]                                                 Ground Truth Answer: True
+ 79%|███████▉  | 158/200 [06:14<02:18,  3.30s/it]                                                 Ground Truth Answer: True
+ 79%|███████▉  | 158/200 [06:21<02:18,  3.30s/it]                                                 Model Answer: True
+ 79%|███████▉  | 158/200 [06:21<02:18,  3.30s/it]                                                 Is Correct: True
+ 79%|███████▉  | 158/200 [06:21<02:18,  3.30s/it]                                                 Correct Count: 79/159
+ 79%|███████▉  | 158/200 [06:21<02:18,  3.30s/it]                                                 --------------------
+ 79%|███████▉  | 158/200 [06:21<02:18,  3.30s/it] 80%|███████▉  | 159/200 [06:21<02:56,  4.31s/it]                                                 Ground Truth Answer: False
+ 80%|███████▉  | 159/200 [06:21<02:56,  4.31s/it]                                                 Ground Truth Answer: False
+ 80%|███████▉  | 159/200 [06:30<02:56,  4.31s/it]                                                 Model Answer: False
+ 80%|███████▉  | 159/200 [06:30<02:56,  4.31s/it]                                                 Is Correct: True
+ 80%|███████▉  | 159/200 [06:30<02:56,  4.31s/it]                                                 Correct Count: 80/160
+ 80%|███████▉  | 159/200 [06:30<02:56,  4.31s/it]                                                 --------------------
+ 80%|███████▉  | 159/200 [06:30<02:56,  4.31s/it] 80%|████████  | 160/200 [06:30<03:53,  5.84s/it]                                                 Ground Truth Answer: True
+ 80%|████████  | 160/200 [06:30<03:53,  5.84s/it]                                                 Ground Truth Answer: True
+ 80%|████████  | 160/200 [06:31<03:53,  5.84s/it]                                                 Model Answer: False
+ 80%|████████  | 160/200 [06:31<03:53,  5.84s/it]                                                 Is Correct: False
+ 80%|████████  | 160/200 [06:31<03:53,  5.84s/it]                                                 Correct Count: 80/161
+ 80%|████████  | 160/200 [06:31<03:53,  5.84s/it]                                                 --------------------
+ 80%|████████  | 160/200 [06:31<03:53,  5.84s/it] 80%|████████  | 161/200 [06:31<02:52,  4.42s/it]                                                 Ground Truth Answer: False
+ 80%|████████  | 161/200 [06:31<02:52,  4.42s/it]                                                 Ground Truth Answer: False
+ 80%|████████  | 161/200 [06:36<02:52,  4.42s/it]                                                 Model Answer: True
+ 80%|████████  | 161/200 [06:36<02:52,  4.42s/it]                                                 Is Correct: False
+ 80%|████████  | 161/200 [06:36<02:52,  4.42s/it]                                                 Correct Count: 80/162
+ 80%|████████  | 161/200 [06:36<02:52,  4.42s/it]                                                 --------------------
+ 80%|████████  | 161/200 [06:36<02:52,  4.42s/it] 81%|████████  | 162/200 [06:36<02:50,  4.48s/it]                                                 Ground Truth Answer: False
+ 81%|████████  | 162/200 [06:36<02:50,  4.48s/it]                                                 Ground Truth Answer: False
+ 81%|████████  | 162/200 [06:36<02:50,  4.48s/it]                                                 Model Answer: False
+ 81%|████████  | 162/200 [06:36<02:50,  4.48s/it]                                                 Is Correct: True
+ 81%|████████  | 162/200 [06:36<02:50,  4.48s/it]                                                 Correct Count: 81/163
+ 81%|████████  | 162/200 [06:36<02:50,  4.48s/it]                                                 --------------------
+ 81%|████████  | 162/200 [06:36<02:50,  4.48s/it] 82%|████████▏ | 163/200 [06:36<01:57,  3.19s/it]                                                 Ground Truth Answer: True
+ 82%|████████▏ | 163/200 [06:36<01:57,  3.19s/it]                                                 Ground Truth Answer: True
+ 82%|████████▏ | 163/200 [06:40<01:57,  3.19s/it]                                                 Model Answer: True
+ 82%|████████▏ | 163/200 [06:40<01:57,  3.19s/it]                                                 Is Correct: True
+ 82%|████████▏ | 163/200 [06:40<01:57,  3.19s/it]                                                 Correct Count: 82/164
+ 82%|████████▏ | 163/200 [06:40<01:57,  3.19s/it]                                                 --------------------
+ 82%|████████▏ | 163/200 [06:40<01:57,  3.19s/it] 82%|████████▏ | 164/200 [06:40<02:02,  3.41s/it]                                                 Ground Truth Answer: True
+ 82%|████████▏ | 164/200 [06:40<02:02,  3.41s/it]                                                 Ground Truth Answer: True
+ 82%|████████▏ | 164/200 [06:41<02:02,  3.41s/it]                                                 Model Answer: False
+ 82%|████████▏ | 164/200 [06:41<02:02,  3.41s/it]                                                 Is Correct: False
+ 82%|████████▏ | 164/200 [06:41<02:02,  3.41s/it]                                                 Correct Count: 82/165
+ 82%|████████▏ | 164/200 [06:41<02:02,  3.41s/it]                                                 --------------------
+ 82%|████████▏ | 164/200 [06:41<02:02,  3.41s/it] 82%|████████▎ | 165/200 [06:41<01:37,  2.79s/it]                                                 Ground Truth Answer: False
+ 82%|████████▎ | 165/200 [06:41<01:37,  2.79s/it]                                                 Ground Truth Answer: False
+ 82%|████████▎ | 165/200 [06:42<01:37,  2.79s/it]                                                 Model Answer: False
+ 82%|████████▎ | 165/200 [06:42<01:37,  2.79s/it]                                                 Is Correct: True
+ 82%|████████▎ | 165/200 [06:42<01:37,  2.79s/it]                                                 Correct Count: 83/166
+ 82%|████████▎ | 165/200 [06:42<01:37,  2.79s/it]                                                 --------------------
+ 82%|████████▎ | 165/200 [06:42<01:37,  2.79s/it] 83%|████████▎ | 166/200 [06:42<01:08,  2.01s/it]                                                 Ground Truth Answer: False
+ 83%|████████▎ | 166/200 [06:42<01:08,  2.01s/it]                                                 Ground Truth Answer: False
+ 83%|████████▎ | 166/200 [06:43<01:08,  2.01s/it]                                                 Model Answer: False
+ 83%|████████▎ | 166/200 [06:43<01:08,  2.01s/it]                                                 Is Correct: True
+ 83%|████████▎ | 166/200 [06:43<01:08,  2.01s/it]                                                 Correct Count: 84/167
+ 83%|████████▎ | 166/200 [06:43<01:08,  2.01s/it]                                                 --------------------
+ 83%|████████▎ | 166/200 [06:43<01:08,  2.01s/it] 84%|████████▎ | 167/200 [06:43<01:01,  1.88s/it]                                                 Ground Truth Answer: False
+ 84%|████████▎ | 167/200 [06:43<01:01,  1.88s/it]                                                 Ground Truth Answer: False
+ 84%|████████▎ | 167/200 [06:46<01:01,  1.88s/it]                                                 Model Answer: False
+ 84%|████████▎ | 167/200 [06:46<01:01,  1.88s/it]                                                 Is Correct: True
+ 84%|████████▎ | 167/200 [06:46<01:01,  1.88s/it]                                                 Correct Count: 85/168
+ 84%|████████▎ | 167/200 [06:46<01:01,  1.88s/it]                                                 --------------------
+ 84%|████████▎ | 167/200 [06:46<01:01,  1.88s/it] 84%|████████▍ | 168/200 [06:46<01:10,  2.20s/it]                                                 Ground Truth Answer: False
+ 84%|████████▍ | 168/200 [06:46<01:10,  2.20s/it]                                                 Ground Truth Answer: False
+ 84%|████████▍ | 168/200 [06:46<01:10,  2.20s/it]                                                 Model Answer: None
+ 84%|████████▍ | 168/200 [06:46<01:10,  2.20s/it]                                                 Is Correct: False
+ 84%|████████▍ | 168/200 [06:46<01:10,  2.20s/it]                                                 Correct Count: 85/169
+ 84%|████████▍ | 168/200 [06:46<01:10,  2.20s/it]                                                 --------------------
+ 84%|████████▍ | 168/200 [06:46<01:10,  2.20s/it] 84%|████████▍ | 169/200 [06:46<00:49,  1.59s/it]                                                 Ground Truth Answer: True
+ 84%|████████▍ | 169/200 [06:46<00:49,  1.59s/it]                                                 Ground Truth Answer: True
+ 84%|████████▍ | 169/200 [06:51<00:49,  1.59s/it]                                                 Model Answer: False
+ 84%|████████▍ | 169/200 [06:51<00:49,  1.59s/it]                                                 Is Correct: False
+ 84%|████████▍ | 169/200 [06:51<00:49,  1.59s/it]                                                 Correct Count: 85/170
+ 84%|████████▍ | 169/200 [06:51<00:49,  1.59s/it]                                                 --------------------
+ 84%|████████▍ | 169/200 [06:51<00:49,  1.59s/it] 85%|████████▌ | 170/200 [06:51<01:15,  2.53s/it]                                                 Ground Truth Answer: False
+ 85%|████████▌ | 170/200 [06:51<01:15,  2.53s/it]                                                 Ground Truth Answer: False
+ 85%|████████▌ | 170/200 [06:54<01:15,  2.53s/it]                                                 Model Answer: None
+ 85%|████████▌ | 170/200 [06:54<01:15,  2.53s/it]                                                 Is Correct: False
+ 85%|████████▌ | 170/200 [06:54<01:15,  2.53s/it]                                                 Correct Count: 85/171
+ 85%|████████▌ | 170/200 [06:54<01:15,  2.53s/it]                                                 --------------------
+ 85%|████████▌ | 170/200 [06:54<01:15,  2.53s/it] 86%|████████▌ | 171/200 [06:54<01:18,  2.70s/it]                                                 Ground Truth Answer: False
+ 86%|████████▌ | 171/200 [06:54<01:18,  2.70s/it]                                                 Ground Truth Answer: False
+ 86%|████████▌ | 171/200 [06:57<01:18,  2.70s/it]                                                 Model Answer: False
+ 86%|████████▌ | 171/200 [06:57<01:18,  2.70s/it]                                                 Is Correct: True
+ 86%|████████▌ | 171/200 [06:57<01:18,  2.70s/it]                                                 Correct Count: 86/172
+ 86%|████████▌ | 171/200 [06:57<01:18,  2.70s/it]                                                 --------------------
+ 86%|████████▌ | 171/200 [06:57<01:18,  2.70s/it] 86%|████████▌ | 172/200 [06:57<01:15,  2.68s/it]                                                 Ground Truth Answer: False
+ 86%|████████▌ | 172/200 [06:57<01:15,  2.68s/it]                                                 Ground Truth Answer: False
+ 86%|████████▌ | 172/200 [07:04<01:15,  2.68s/it]                                                 Model Answer: False
+ 86%|████████▌ | 172/200 [07:04<01:15,  2.68s/it]                                                 Is Correct: True
+ 86%|████████▌ | 172/200 [07:04<01:15,  2.68s/it]                                                 Correct Count: 87/173
+ 86%|████████▌ | 172/200 [07:04<01:15,  2.68s/it]                                                 --------------------
+ 86%|████████▌ | 172/200 [07:04<01:15,  2.68s/it] 86%|████████▋ | 173/200 [07:04<01:52,  4.16s/it]                                                 Ground Truth Answer: False
+ 86%|████████▋ | 173/200 [07:04<01:52,  4.16s/it]                                                 Ground Truth Answer: False
+ 86%|████████▋ | 173/200 [07:05<01:52,  4.16s/it]                                                 Model Answer: None
+ 86%|████████▋ | 173/200 [07:05<01:52,  4.16s/it]                                                 Is Correct: False
+ 86%|████████▋ | 173/200 [07:05<01:52,  4.16s/it]                                                 Correct Count: 87/174
+ 86%|████████▋ | 173/200 [07:05<01:52,  4.16s/it]                                                 --------------------
+ 86%|████████▋ | 173/200 [07:05<01:52,  4.16s/it] 87%|████████▋ | 174/200 [07:05<01:17,  2.96s/it]                                                 Ground Truth Answer: True
+ 87%|████████▋ | 174/200 [07:05<01:17,  2.96s/it]                                                 Ground Truth Answer: True
+ 87%|████████▋ | 174/200 [07:05<01:17,  2.96s/it]                                                 Model Answer: None
+ 87%|████████▋ | 174/200 [07:05<01:17,  2.96s/it]                                                 Is Correct: False
+ 87%|████████▋ | 174/200 [07:05<01:17,  2.96s/it]                                                 Correct Count: 87/175
+ 87%|████████▋ | 174/200 [07:05<01:17,  2.96s/it]                                                 --------------------
+ 87%|████████▋ | 174/200 [07:05<01:17,  2.96s/it] 88%|████████▊ | 175/200 [07:05<00:55,  2.21s/it]                                                 Ground Truth Answer: False
+ 88%|████████▊ | 175/200 [07:05<00:55,  2.21s/it]                                                 Ground Truth Answer: False
+ 88%|████████▊ | 175/200 [07:08<00:55,  2.21s/it]                                                 Model Answer: False
+ 88%|████████▊ | 175/200 [07:08<00:55,  2.21s/it]                                                 Is Correct: True
+ 88%|████████▊ | 175/200 [07:08<00:55,  2.21s/it]                                                 Correct Count: 88/176
+ 88%|████████▊ | 175/200 [07:08<00:55,  2.21s/it]                                                 --------------------
+ 88%|████████▊ | 175/200 [07:08<00:55,  2.21s/it] 88%|████████▊ | 176/200 [07:08<00:57,  2.40s/it]                                                 Ground Truth Answer: False
+ 88%|████████▊ | 176/200 [07:08<00:57,  2.40s/it]                                                 Ground Truth Answer: False
+ 88%|████████▊ | 176/200 [07:13<00:57,  2.40s/it]                                                 Model Answer: True
+ 88%|████████▊ | 176/200 [07:13<00:57,  2.40s/it]                                                 Is Correct: False
+ 88%|████████▊ | 176/200 [07:13<00:57,  2.40s/it]                                                 Correct Count: 88/177
+ 88%|████████▊ | 176/200 [07:13<00:57,  2.40s/it]                                                 --------------------
+ 88%|████████▊ | 176/200 [07:13<00:57,  2.40s/it] 88%|████████▊ | 177/200 [07:13<01:14,  3.24s/it]                                                 Ground Truth Answer: False
+ 88%|████████▊ | 177/200 [07:13<01:14,  3.24s/it]                                                 Ground Truth Answer: False
+ 88%|████████▊ | 177/200 [07:15<01:14,  3.24s/it]                                                 Model Answer: False
+ 88%|████████▊ | 177/200 [07:15<01:14,  3.24s/it]                                                 Is Correct: True
+ 88%|████████▊ | 177/200 [07:15<01:14,  3.24s/it]                                                 Correct Count: 89/178
+ 88%|████████▊ | 177/200 [07:15<01:14,  3.24s/it]                                                 --------------------
+ 88%|████████▊ | 177/200 [07:15<01:14,  3.24s/it] 89%|████████▉ | 178/200 [07:15<01:01,  2.80s/it]                                                 Ground Truth Answer: False
+ 89%|████████▉ | 178/200 [07:15<01:01,  2.80s/it]                                                 Ground Truth Answer: False
+ 89%|████████▉ | 178/200 [07:22<01:01,  2.80s/it]                                                 Model Answer: True
+ 89%|████████▉ | 178/200 [07:22<01:01,  2.80s/it]                                                 Is Correct: False
+ 89%|████████▉ | 178/200 [07:22<01:01,  2.80s/it]                                                 Correct Count: 89/179
+ 89%|████████▉ | 178/200 [07:22<01:01,  2.80s/it]                                                 --------------------
+ 89%|████████▉ | 178/200 [07:22<01:01,  2.80s/it] 90%|████████▉ | 179/200 [07:22<01:28,  4.20s/it]                                                 Ground Truth Answer: True
+ 90%|████████▉ | 179/200 [07:22<01:28,  4.20s/it]                                                 Ground Truth Answer: True
+ 90%|████████▉ | 179/200 [07:25<01:28,  4.20s/it]                                                 Model Answer: False
+ 90%|████████▉ | 179/200 [07:25<01:28,  4.20s/it]                                                 Is Correct: False
+ 90%|████████▉ | 179/200 [07:25<01:28,  4.20s/it]                                                 Correct Count: 89/180
+ 90%|████████▉ | 179/200 [07:25<01:28,  4.20s/it]                                                 --------------------
+ 90%|████████▉ | 179/200 [07:25<01:28,  4.20s/it] 90%|█████████ | 180/200 [07:25<01:12,  3.61s/it]                                                 Ground Truth Answer: False
+ 90%|█████████ | 180/200 [07:25<01:12,  3.61s/it]                                                 Ground Truth Answer: False
+ 90%|█████████ | 180/200 [07:27<01:12,  3.61s/it]                                                 Model Answer: False
+ 90%|█████████ | 180/200 [07:27<01:12,  3.61s/it]                                                 Is Correct: True
+ 90%|█████████ | 180/200 [07:27<01:12,  3.61s/it]                                                 Correct Count: 90/181
+ 90%|█████████ | 180/200 [07:27<01:12,  3.61s/it]                                                 --------------------
+ 90%|█████████ | 180/200 [07:27<01:12,  3.61s/it] 90%|█████████ | 181/200 [07:27<01:02,  3.28s/it]                                                 Ground Truth Answer: False
+ 90%|█████████ | 181/200 [07:27<01:02,  3.28s/it]                                                 Ground Truth Answer: False
+ 90%|█████████ | 181/200 [07:29<01:02,  3.28s/it]                                                 Model Answer: False
+ 90%|█████████ | 181/200 [07:29<01:02,  3.28s/it]                                                 Is Correct: True
+ 90%|█████████ | 181/200 [07:29<01:02,  3.28s/it]                                                 Correct Count: 91/182
+ 90%|█████████ | 181/200 [07:29<01:02,  3.28s/it]                                                 --------------------
+ 90%|█████████ | 181/200 [07:29<01:02,  3.28s/it] 91%|█████████ | 182/200 [07:29<00:53,  2.95s/it]                                                 Ground Truth Answer: True
+ 91%|█████████ | 182/200 [07:29<00:53,  2.95s/it]                                                 Ground Truth Answer: True
+ 91%|█████████ | 182/200 [07:32<00:53,  2.95s/it]                                                 Model Answer: False
+ 91%|█████████ | 182/200 [07:32<00:53,  2.95s/it]                                                 Is Correct: False
+ 91%|█████████ | 182/200 [07:32<00:53,  2.95s/it]                                                 Correct Count: 91/183
+ 91%|█████████ | 182/200 [07:32<00:53,  2.95s/it]                                                 --------------------
+ 91%|█████████ | 182/200 [07:32<00:53,  2.95s/it] 92%|█████████▏| 183/200 [07:32<00:48,  2.83s/it]                                                 Ground Truth Answer: True
+ 92%|█████████▏| 183/200 [07:32<00:48,  2.83s/it]                                                 Ground Truth Answer: True
+ 92%|█████████▏| 183/200 [07:36<00:48,  2.83s/it]                                                 Model Answer: None
+ 92%|█████████▏| 183/200 [07:36<00:48,  2.83s/it]                                                 Is Correct: False
+ 92%|█████████▏| 183/200 [07:36<00:48,  2.83s/it]                                                 Correct Count: 91/184
+ 92%|█████████▏| 183/200 [07:36<00:48,  2.83s/it]                                                 --------------------
+ 92%|█████████▏| 183/200 [07:36<00:48,  2.83s/it] 92%|█████████▏| 184/200 [07:36<00:50,  3.14s/it]                                                 Ground Truth Answer: False
+ 92%|█████████▏| 184/200 [07:36<00:50,  3.14s/it]                                                 Ground Truth Answer: False
+ 92%|█████████▏| 184/200 [07:36<00:50,  3.14s/it]                                                 Model Answer: False
+ 92%|█████████▏| 184/200 [07:36<00:50,  3.14s/it]                                                 Is Correct: True
+ 92%|█████████▏| 184/200 [07:36<00:50,  3.14s/it]                                                 Correct Count: 92/185
+ 92%|█████████▏| 184/200 [07:36<00:50,  3.14s/it]                                                 --------------------
+ 92%|█████████▏| 184/200 [07:36<00:50,  3.14s/it] 92%|█████████▎| 185/200 [07:36<00:34,  2.27s/it]                                                 Ground Truth Answer: True
+ 92%|█████████▎| 185/200 [07:36<00:34,  2.27s/it]                                                 Ground Truth Answer: True
+ 92%|█████████▎| 185/200 [07:39<00:34,  2.27s/it]                                                 Model Answer: False
+ 92%|█████████▎| 185/200 [07:39<00:34,  2.27s/it]                                                 Is Correct: False
+ 92%|█████████▎| 185/200 [07:39<00:34,  2.27s/it]                                                 Correct Count: 92/186
+ 92%|█████████▎| 185/200 [07:39<00:34,  2.27s/it]                                                 --------------------
+ 92%|█████████▎| 185/200 [07:39<00:34,  2.27s/it] 93%|█████████▎| 186/200 [07:39<00:36,  2.64s/it]                                                 Ground Truth Answer: False
+ 93%|█████████▎| 186/200 [07:39<00:36,  2.64s/it]                                                 Ground Truth Answer: False
+ 93%|█████████▎| 186/200 [07:40<00:36,  2.64s/it]                                                 Model Answer: False
+ 93%|█████████▎| 186/200 [07:40<00:36,  2.64s/it]                                                 Is Correct: True
+ 93%|█████████▎| 186/200 [07:40<00:36,  2.64s/it]                                                 Correct Count: 93/187
+ 93%|█████████▎| 186/200 [07:40<00:36,  2.64s/it]                                                 --------------------
+ 93%|█████████▎| 186/200 [07:40<00:36,  2.64s/it] 94%|█████████▎| 187/200 [07:40<00:24,  1.89s/it]                                                 Ground Truth Answer: False
+ 94%|█████████▎| 187/200 [07:40<00:24,  1.89s/it]                                                 Ground Truth Answer: False
+ 94%|█████████▎| 187/200 [07:41<00:24,  1.89s/it]                                                 Model Answer: False
+ 94%|█████████▎| 187/200 [07:41<00:24,  1.89s/it]                                                 Is Correct: True
+ 94%|█████████▎| 187/200 [07:41<00:24,  1.89s/it]                                                 Correct Count: 94/188
+ 94%|█████████▎| 187/200 [07:41<00:24,  1.89s/it]                                                 --------------------
+ 94%|█████████▎| 187/200 [07:41<00:24,  1.89s/it] 94%|█████████▍| 188/200 [07:41<00:20,  1.70s/it]                                                 Ground Truth Answer: False
+ 94%|█████████▍| 188/200 [07:41<00:20,  1.70s/it]                                                 Ground Truth Answer: False
+ 94%|█████████▍| 188/200 [07:43<00:20,  1.70s/it]                                                 Model Answer: False
+ 94%|█████████▍| 188/200 [07:43<00:20,  1.70s/it]                                                 Is Correct: True
+ 94%|█████████▍| 188/200 [07:43<00:20,  1.70s/it]                                                 Correct Count: 95/189
+ 94%|█████████▍| 188/200 [07:43<00:20,  1.70s/it]                                                 --------------------
+ 94%|█████████▍| 188/200 [07:43<00:20,  1.70s/it] 94%|█████████▍| 189/200 [07:43<00:21,  1.96s/it]                                                 Ground Truth Answer: True
+ 94%|█████████▍| 189/200 [07:43<00:21,  1.96s/it]                                                 Ground Truth Answer: True
+ 94%|█████████▍| 189/200 [07:46<00:21,  1.96s/it]                                                 Model Answer: True
+ 94%|█████████▍| 189/200 [07:46<00:21,  1.96s/it]                                                 Is Correct: True
+ 94%|█████████▍| 189/200 [07:46<00:21,  1.96s/it]                                                 Correct Count: 96/190
+ 94%|█████████▍| 189/200 [07:46<00:21,  1.96s/it]                                                 --------------------
+ 94%|█████████▍| 189/200 [07:46<00:21,  1.96s/it] 95%|█████████▌| 190/200 [07:46<00:22,  2.25s/it]                                                 Ground Truth Answer: False
+ 95%|█████████▌| 190/200 [07:46<00:22,  2.25s/it]                                                 Ground Truth Answer: False
+ 95%|█████████▌| 190/200 [07:46<00:22,  2.25s/it]                                                 Model Answer: False
+ 95%|█████████▌| 190/200 [07:46<00:22,  2.25s/it]                                                 Is Correct: True
+ 95%|█████████▌| 190/200 [07:46<00:22,  2.25s/it]                                                 Correct Count: 97/191
+ 95%|█████████▌| 190/200 [07:46<00:22,  2.25s/it]                                                 --------------------
+ 95%|█████████▌| 190/200 [07:46<00:22,  2.25s/it] 96%|█████████▌| 191/200 [07:46<00:14,  1.62s/it]                                                 Ground Truth Answer: True
+ 96%|█████████▌| 191/200 [07:46<00:14,  1.62s/it]                                                 Ground Truth Answer: True
+ 96%|█████████▌| 191/200 [07:47<00:14,  1.62s/it]                                                 Model Answer: None
+ 96%|█████████▌| 191/200 [07:47<00:14,  1.62s/it]                                                 Is Correct: False
+ 96%|█████████▌| 191/200 [07:47<00:14,  1.62s/it]                                                 Correct Count: 97/192
+ 96%|█████████▌| 191/200 [07:47<00:14,  1.62s/it]                                                 --------------------
+ 96%|█████████▌| 191/200 [07:47<00:14,  1.62s/it] 96%|█████████▌| 192/200 [07:47<00:09,  1.19s/it]                                                 Ground Truth Answer: True
+ 96%|█████████▌| 192/200 [07:47<00:09,  1.19s/it]                                                 Ground Truth Answer: True
+ 96%|█████████▌| 192/200 [07:47<00:09,  1.19s/it]                                                 Model Answer: False
+ 96%|█████████▌| 192/200 [07:47<00:09,  1.19s/it]                                                 Is Correct: False
+ 96%|█████████▌| 192/200 [07:47<00:09,  1.19s/it]                                                 Correct Count: 97/193
+ 96%|█████████▌| 192/200 [07:47<00:09,  1.19s/it]                                                 --------------------
+ 96%|█████████▌| 192/200 [07:47<00:09,  1.19s/it] 96%|█████████▋| 193/200 [07:47<00:06,  1.14it/s]                                                 Ground Truth Answer: False
+ 96%|█████████▋| 193/200 [07:47<00:06,  1.14it/s]                                                 Ground Truth Answer: False
+ 96%|█████████▋| 193/200 [07:47<00:06,  1.14it/s]                                                 Model Answer: False
+ 96%|█████████▋| 193/200 [07:47<00:06,  1.14it/s]                                                 Is Correct: True
+ 96%|█████████▋| 193/200 [07:47<00:06,  1.14it/s]                                                 Correct Count: 98/194
+ 96%|█████████▋| 193/200 [07:47<00:06,  1.14it/s]                                                 --------------------
+ 96%|█████████▋| 193/200 [07:47<00:06,  1.14it/s] 97%|█████████▋| 194/200 [07:47<00:03,  1.52it/s]                                                 Ground Truth Answer: False
+ 97%|█████████▋| 194/200 [07:47<00:03,  1.52it/s]                                                 Ground Truth Answer: False
+ 97%|█████████▋| 194/200 [07:51<00:03,  1.52it/s]                                                 Model Answer: False
+ 97%|█████████▋| 194/200 [07:51<00:03,  1.52it/s]                                                 Is Correct: True
+ 97%|█████████▋| 194/200 [07:51<00:03,  1.52it/s]                                                 Correct Count: 99/195
+ 97%|█████████▋| 194/200 [07:51<00:03,  1.52it/s]                                                 --------------------
+ 97%|█████████▋| 194/200 [07:51<00:03,  1.52it/s] 98%|█████████▊| 195/200 [07:51<00:07,  1.53s/it]                                                 Ground Truth Answer: False
+ 98%|█████████▊| 195/200 [07:51<00:07,  1.53s/it]                                                 Ground Truth Answer: False
+ 98%|█████████▊| 195/200 [07:52<00:07,  1.53s/it]                                                 Model Answer: False
+ 98%|█████████▊| 195/200 [07:52<00:07,  1.53s/it]                                                 Is Correct: True
+ 98%|█████████▊| 195/200 [07:52<00:07,  1.53s/it]                                                 Correct Count: 100/196
+ 98%|█████████▊| 195/200 [07:52<00:07,  1.53s/it]                                                 --------------------
+ 98%|█████████▊| 195/200 [07:52<00:07,  1.53s/it] 98%|█████████▊| 196/200 [07:52<00:06,  1.63s/it]                                                 Ground Truth Answer: True
+ 98%|█████████▊| 196/200 [07:52<00:06,  1.63s/it]                                                 Ground Truth Answer: True
+ 98%|█████████▊| 196/200 [07:53<00:06,  1.63s/it]                                                 Model Answer: False
+ 98%|█████████▊| 196/200 [07:53<00:06,  1.63s/it]                                                 Is Correct: False
+ 98%|█████████▊| 196/200 [07:53<00:06,  1.63s/it]                                                 Correct Count: 100/197
+ 98%|█████████▊| 196/200 [07:53<00:06,  1.63s/it]                                                 --------------------
+ 98%|█████████▊| 196/200 [07:53<00:06,  1.63s/it] 98%|█████████▊| 197/200 [07:53<00:03,  1.18s/it]                                                 Ground Truth Answer: True
+ 98%|█████████▊| 197/200 [07:53<00:03,  1.18s/it]                                                 Ground Truth Answer: True
+ 98%|█████████▊| 197/200 [07:59<00:03,  1.18s/it]                                                 Model Answer: True
+ 98%|█████████▊| 197/200 [07:59<00:03,  1.18s/it]                                                 Is Correct: True
+ 98%|█████████▊| 197/200 [07:59<00:03,  1.18s/it]                                                 Correct Count: 101/198
+ 98%|█████████▊| 197/200 [07:59<00:03,  1.18s/it]                                                 --------------------
+ 98%|█████████▊| 197/200 [07:59<00:03,  1.18s/it] 99%|█████████▉| 198/200 [07:59<00:05,  2.67s/it]                                                 Ground Truth Answer: True
+ 99%|█████████▉| 198/200 [07:59<00:05,  2.67s/it]                                                 Ground Truth Answer: True
+ 99%|█████████▉| 198/200 [08:05<00:05,  2.67s/it]                                                 Model Answer: True
+ 99%|█████████▉| 198/200 [08:05<00:05,  2.67s/it]                                                 Is Correct: True
+ 99%|█████████▉| 198/200 [08:05<00:05,  2.67s/it]                                                 Correct Count: 102/199
+ 99%|█████████▉| 198/200 [08:05<00:05,  2.67s/it]                                                 --------------------
+ 99%|█████████▉| 198/200 [08:05<00:05,  2.67s/it]100%|█████████▉| 199/200 [08:05<00:03,  3.80s/it]                                                 Ground Truth Answer: False
+100%|█████████▉| 199/200 [08:05<00:03,  3.80s/it]                                                 Ground Truth Answer: False
+100%|█████████▉| 199/200 [08:08<00:03,  3.80s/it]                                                 Model Answer: False
+100%|█████████▉| 199/200 [08:08<00:03,  3.80s/it]                                                 Is Correct: True
+100%|█████████▉| 199/200 [08:08<00:03,  3.80s/it]                                                 Correct Count: 103/200
+100%|█████████▉| 199/200 [08:08<00:03,  3.80s/it]                                                 --------------------
+100%|█████████▉| 199/200 [08:08<00:03,  3.80s/it]100%|██████████| 200/200 [08:08<00:00,  3.57s/it]100%|██████████| 200/200 [08:08<00:00,  2.44s/it]
+Final Accuracy: 0.515000 (103/200)

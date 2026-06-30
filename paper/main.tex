@@ -1,0 +1,319 @@
+\documentclass{article}
+
+\usepackage[preprint]{caisc_2026}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{longtable}
+
+\title{A Timeboxed Transfer Audit of GSM8K-Trained SoftCoT}
+
+\author{%
+  Aditya Kishore\\
+  Lossfunk Autoresearch Sprint\\
+  \texttt{AI-authored first draft; human critique separate}\\
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Soft chain-of-thought methods invite an attractive interpretation: if learned continuous thought tokens improve benchmark accuracy, perhaps they encode reusable latent reasoning. This first-draft autoresearch artifact tests a narrow version of that interpretation. We trained only the SoftCoT projection component on GSM8K and evaluated the resulting source-trained setup on GSM8K, the related arithmetic target ASDiv-Aug, and the nominally unrelated commonsense target StrategyQA, with no target-task tuning. Across three seeds and fixed 200-example splits, learned SoftCoT improved over a zero soft-thought control on all three datasets, suggesting that the learned projection contains task-relevant signal. However, it did not improve over the no-SoftCoT baseline on GSM8K or ASDiv-Aug in the three-seed mean. The clearest learned-over-baseline gain instead appeared on StrategyQA: +11.5 points on the fixed subset and +10.6 points in a full-dev extension. Thus the original related-transfer hypothesis was not supported. The artifact is best read as a small falsifying audit: GSM8K-trained soft thoughts can contain useful signal without behaving like a simple reusable arithmetic-reasoning representation.
+\end{abstract}
+
+\section{Introduction}
+
+SoftCoT proposes to replace part of explicit chain-of-thought decoding with instance-specific soft thought tokens produced by a small assistant model and projected into a larger frozen model's representation space \citep{xuyi2025softcot}. This gives a tempting story. If a continuous thought representation improves a reasoning benchmark, perhaps it is not merely a hidden prompt, but a reusable latent reasoning state.
+
+This sprint tested one concrete diagnostic from the submitted proposal: transfer. If GSM8K-trained soft thoughts encode reusable arithmetic reasoning, their learned projection should help a related arithmetic target such as ASDiv-Aug more than an unrelated target such as StrategyQA. Conversely, if the representation mostly acts as a dataset- or format-specific continuous prompt, in-domain gains need not transfer in the expected way.
+
+The result is more interesting than a positive confirmation. The learned projection consistently beat a zero soft-thought control, so the added vectors were not inert. But the expected related-transfer pattern did not appear. On the three-seed fixed split, learned SoftCoT underperformed the no-SoftCoT baseline on both GSM8K and ASDiv-Aug, while outperforming it on StrategyQA. A full-target extension preserved the same qualitative pattern: StrategyQA improved, ASDiv-Aug did not.
+
+The contribution is therefore modest and negative:
+
+\begin{itemize}
+  \item a scoped, source-only transfer audit of SoftCoT using Qwen2.5 models;
+  \item fixed 200-example comparisons on GSM8K, ASDiv-Aug, and StrategyQA with learned SoftCoT, zero soft-thought control, and no-SoftCoT baseline;
+  \item a larger evaluation-only extension on full StrategyQA dev and ASDiv-Aug test for learned SoftCoT versus baseline;
+  \item an explicit record of failures, compute constraints, user interventions, and pre-draft reviewer criticism.
+\end{itemize}
+
+This is not a claim that SoftCoT fails in general, nor that StrategyQA transfer reflects genuine commonsense reasoning. It is a preliminary audit showing that the proposed related-transfer diagnostic did not validate the original hypothesis under this implementation and budget.
+
+\section{Background and Hypothesis}
+
+Chain-of-thought prompting improves many reasoning tasks by asking a model to produce intermediate textual reasoning steps \citep{wei2022cot}. Soft prompt methods show that continuous prompts can condition frozen language models \citep{lester2021prompttuning}, and transfer work such as SPoT shows that learned soft prompts can sometimes help across tasks \citep{vu2022spot}. SoftCoT differs from a static soft prompt by generating instance-specific soft thought tokens with an assistant model and mapping them into the base LLM representation space \citep{xuyi2025softcot}.
+
+The proposal asked whether these soft thought tokens should be interpreted as reusable latent reasoning. The central pre-registered contrast was:
+
+\[
+D = [Acc(\text{ASDiv-Aug}, \text{learned}) - Acc(\text{ASDiv-Aug}, \text{baseline})] -
+    [Acc(\text{StrategyQA}, \text{learned}) - Acc(\text{StrategyQA}, \text{baseline})].
+\]
+
+The expected pattern was $D > 0$: a GSM8K-trained component should transfer more to ASDiv-Aug, a related arithmetic task, than to StrategyQA, a boolean commonsense task. A non-positive $D$ would not support the related-transfer hypothesis. The protocol also required a source-task sanity check on GSM8K and a zero soft-thought control.
+
+\section{Experimental Design}
+
+\paragraph{Models.}
+The experiment used Qwen2.5-7B-Instruct as the frozen base model and Qwen2.5-1.5B-Instruct as the fixed assistant model \citep{qwen2025qwen25}. Only the SoftCoT projection module was trained. The training logs report 5,508,608 trainable parameters out of 9,164,839,424 total parameters.
+
+\paragraph{Source and targets.}
+The source task was GSM8K \citep{cobbe2021gsm8k}. The related target was ASDiv-Aug, using the public xuyige ASDiv-Aug test split linked by the SoftCoT ecosystem \citep{xuyige2026asdivaug}. The unrelated target was StrategyQA dev \citep{geva2021strategyqa}. Target labels were not used for tuning, prompt selection, or checkpoint selection.
+
+\paragraph{Conditions.}
+For each seed and dataset, the core comparison evaluated:
+
+\begin{enumerate}
+  \item learned SoftCoT: GSM8K-trained projection, four soft thought tokens;
+  \item zero soft-thought control: same soft-thought slots, but learned information removed by zeroing;
+  \item no-SoftCoT baseline: direct base-model evaluation with zero thought tokens.
+\end{enumerate}
+
+All core evaluations used one returned sequence, a 512-token generation cap, and fixed 200-example splits selected by deterministic input hashes before target results were observed. Seeds were 41, 42, and 43. The extension reused the trained checkpoints and evaluated learned SoftCoT versus baseline on full StrategyQA dev (229 examples per seed) and full ASDiv-Aug test (1,038 examples per seed). Full zero-control runs were not performed in the extension.
+
+\paragraph{Environment and resource caveat.}
+The runs used a user-provided ISL-Shakti lab server with an NVIDIA A100 80GB PCIe. The Python environment was \path{/data2/anaconda3/envs/softcot} with Python 3.13.7, PyTorch 2.8.0, Transformers 4.57.3, datasets 4.1.1, accelerate 1.10.1, PEFT 0.13.2, and fastNLP 0.7.0. Runs used batch size 1. Seeds 41 and 43 were contended-GPU runs; seed 43 used an explicit lower-memory start override of 30,000 MiB. These conditions make latency incomparable. Since the server was user-provided shared lab hardware, no cloud billing receipt exists and known external spend remained US\$0.00.
+
+\section{Results}
+
+\subsection{Core fixed-split comparison}
+
+Table \ref{tab:core} gives the three-seed fixed-split results. Learned SoftCoT beat the zero control on all three tasks in the mean. But it did not beat the no-SoftCoT baseline on GSM8K or ASDiv-Aug. On StrategyQA, learned SoftCoT beat both controls.
+
+\begin{table}[h]
+\centering
+\caption{Core 200-example fixed-split accuracies. Each cell is the mean over seeds 41, 42, and 43.}
+\label{tab:core}
+\begin{tabular}{lccc}
+\toprule
+Task & Learned SoftCoT & Zero control & No-SoftCoT baseline \\
+\midrule
+GSM8K & 0.8250 & 0.7950 & 0.8683 \\
+ASDiv-Aug & 0.8567 & 0.7950 & 0.8683 \\
+StrategyQA & 0.6517 & 0.5867 & 0.5367 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The learned-minus-baseline target deltas were -0.0117 on ASDiv-Aug and +0.1150 on StrategyQA. Therefore the pre-registered related-minus-unrelated contrast was approximately -0.1267, not positive. This directly fails to support the original related-transfer prediction.
+
+\subsection{Seed-level pattern}
+
+\begin{table}[h]
+\centering
+\caption{Learned SoftCoT minus no-SoftCoT baseline by seed.}
+\label{tab:deltas}
+\begin{tabular}{lrrr}
+\toprule
+Task & Seed 41 & Seed 42 & Seed 43 \\
+\midrule
+GSM8K & -0.020 & -0.110 & 0.000 \\
+ASDiv-Aug & -0.030 & -0.050 & +0.045 \\
+StrategyQA & +0.105 & +0.090 & +0.150 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The StrategyQA advantage was stable across seeds, while the ASDiv-Aug comparison was mixed and negative in two of three seeds. Seed 43 should be interpreted cautiously because it was launched under the lower-memory contended protocol, but removing it would not rescue the related-transfer hypothesis: the first two ASDiv-Aug deltas are both negative and the first two StrategyQA deltas are both positive.
+
+\subsection{Item-level agreement}
+
+The paired item analysis compared conditions on the same fixed-split examples. Across 600 paired examples per task (three seeds times 200 examples), learned SoftCoT had 117 StrategyQA items correct that baseline missed, while baseline had 48 items correct that learned SoftCoT missed. On ASDiv-Aug, the corresponding counts were 23 versus 30; on GSM8K, 36 versus 62.
+
+\begin{table}[h]
+\centering
+\caption{Paired item-level learned SoftCoT versus no-SoftCoT baseline.}
+\label{tab:item}
+\begin{tabular}{lrrr}
+\toprule
+Task & Paired N & Learned-only correct & Baseline-only correct \\
+\midrule
+GSM8K & 600 & 36 & 62 \\
+ASDiv-Aug & 600 & 23 & 30 \\
+StrategyQA & 600 & 117 & 48 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+This suggests that the StrategyQA gain is not merely one seed or a small aggregate artifact. It also reinforces the negative arithmetic-transfer result.
+
+\subsection{Full-target extension}
+
+After the core comparison, the same checkpoints were evaluated on the full StrategyQA dev and ASDiv-Aug test files for learned SoftCoT and baseline. This extension was evaluation-only and did not add target tuning.
+
+\begin{table}[h]
+\centering
+\caption{Full-target extension. Zero-control runs were not performed in this extension.}
+\label{tab:full}
+\begin{tabular}{lrrrr}
+\toprule
+Task & N per seed & Learned & Baseline & Learned minus baseline \\
+\midrule
+StrategyQA dev & 229 & 0.6405 & 0.5342 & +0.1063 \\
+ASDiv-Aug test & 1,038 & 0.8642 & 0.8776 & -0.0135 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The extension strengthens the main conclusion. StrategyQA remains positive; ASDiv-Aug remains slightly negative on average.
+
+\section{Discussion}
+
+The original proposal was framed around a plausible intuition: arithmetic soft thoughts trained on GSM8K should transfer preferentially to another arithmetic dataset. This sprint found the opposite descriptive pattern. The result does not prove that SoftCoT is only a hidden prompt, but it weakens the simple version of the reusable-arithmetic-reasoning interpretation.
+
+The cleanest interpretation is narrower:
+
+\begin{quote}
+The learned projection contains signal relative to a zero-vector intervention, but in this setup that signal does not translate into a reliable advantage over direct prompting on the source arithmetic task or the related arithmetic target. The most robust learned-over-baseline gain appears on StrategyQA, which was meant to be the unrelated target.
+\end{quote}
+
+Several explanations remain open. The StrategyQA gain may reflect answer-format interactions, yes/no calibration, prompt-template effects, or a regularization effect from the inserted learned vectors rather than genuine transfer of commonsense reasoning. ASDiv-Aug may be too close to the baseline model's strong arithmetic behavior for this SoftCoT configuration to add value. The source GSM8K training objective may also produce vectors that are useful as a general instruction perturbation without encoding the hypothesized arithmetic operation.
+
+For the six-month version of the project, the proposal should be reshaped from "build Router, Verifier, and Memory to improve SoftCoT transfer" to "audit when soft thought vectors behave as reusable latent reasoning versus task/format-specific continuous prompts." Router, Verifier, and Memory should become follow-up mechanisms only after the transfer geometry is understood.
+
+\section{Reviewer-Pass Findings Before Drafting}
+
+Before drafting, the artifact was reviewed as if by a skeptical AI conference reviewer. The reviewer pass found the work viable only as a mixed or negative preliminary audit. It explicitly rejected the following stronger claims:
+
+\begin{itemize}
+  \item broad transfer improvement;
+  \item confirmation of the related-transfer distinction;
+  \item statistical significance beyond a small three-seed run;
+  \item latency or throughput improvement;
+  \item a full faithful reproduction of every SoftCoT configuration.
+\end{itemize}
+
+The pass also identified caveats that must remain visible: seed 43's lower-memory protocol, shared GPU contention, simple StrategyQA parsing, fixed-subset limitations, full-target missing zero controls, and implementation-specific Qwen changes. These caveats are not cosmetic; they define the actual claim.
+
+\section{Limitations}
+
+This artifact is intentionally small. It used three seeds, fixed 200-example core splits, one base/assistant model pair, and a timeboxed fork of the official SoftCoT implementation. The full-target extension omitted zero controls. The lab GPU was shared and sometimes heavily contended, so runtime and latency should not be compared across conditions. Seed 43 used a lower-memory override requested by the user and must not be treated as identical to the idle seed-42 protocol.
+
+The answer parsers are task-specific and simple. StrategyQA generations were reduced to yes/no answers; ambiguous generations may be mishandled. The no-SoftCoT baseline is identified from result file condition and \texttt{num\_thought\_tokens=0}, because some raw metadata still carries the \texttt{soft\_thought\_control} string from shared evaluator arguments.
+
+Finally, this is not evidence about all continuous reasoning methods. It is a narrow result about one implementation, one model pair, three datasets, and a constrained compute budget.
+
+\section{Reproducibility}
+
+The selected spike directory contains code, scripts, raw results, archives, logs, failures, and this paper source. The canonical local artifact root is:
+
+\begin{quote}
+\texttt{all-spikes/gsm8k-asdiv-strategyqa-transfer/}
+\end{quote}
+
+The frozen core archive is:
+
+\begin{quote}
+\texttt{frozen-results/2026-06-28\_seed41\_42\_43/lossfunk\_results\_seed41\_42\_43.tar.gz}
+\end{quote}
+
+with SHA-256:
+
+\begin{quote}
+\texttt{0e331230d33b09da8d87ab0000f17d1861a5ea8ced308c90bc573590b89afd8b}.
+\end{quote}
+
+The full-target extension archive is:
+
+\begin{quote}
+\texttt{frozen-results/2026-06-29\_full\_target\_extension/lossfunk\_full\_target\_extension\_seed41\_42\_43.tar.gz}
+\end{quote}
+
+with SHA-256:
+
+\begin{quote}
+\texttt{7d8ddf85d2dda16bdecc4465860c39c821a9878f9816f170e78ba9bae9c5cfad}.
+\end{quote}
+
+The main experiment commands were:
+
+\begin{verbatim}
+bash scripts/run_seed.sh 41 1
+bash scripts/run_seed.sh 42 1
+MIN_GPU_FREE_MIB_OVERRIDE=30000 bash scripts/run_seed.sh 43 1
+TASKS="strategyqa asdiv-aug" CONDITIONS="learned baseline" \
+  bash scripts/run_full_target_evals.sh 41 30000
+TASKS="strategyqa asdiv-aug" CONDITIONS="learned baseline" \
+  bash scripts/run_full_target_evals.sh 42 30000
+TASKS="strategyqa asdiv-aug" CONDITIONS="learned baseline" \
+  bash scripts/run_full_target_evals.sh 43 30000
+\end{verbatim}
+
+The exact command ledger is in \path{logs/commands.md}; setup failures are in \path{logs/failures.md}; costs are in \path{logs/costs.md}; user interventions are in \path{logs/human-intervention.md}.
+
+\section{Conclusion}
+
+The seven-day audit produced a result worth keeping because it corrected the proposal. GSM8K-trained SoftCoT did not show the expected related arithmetic transfer advantage. It contained signal relative to a zero-vector control, but the clearest learned-over-baseline improvement appeared on StrategyQA rather than ASDiv-Aug. The revised research program should therefore treat transfer behavior as the object of study, not as an assumed property of soft thought vectors.
+
+\begin{ack}
+This paper is an AI-authored first draft produced with Codex during a Lossfunk autoresearch sprint. The human researcher selected the scope, provided server access, authorized lower-memory execution, and supplied run-status observations. Codex assisted with experiment design, code adaptation, logging, analysis, reviewer-pass drafting, and paper drafting. The human critique and reflection deck are intentionally not drafted here.
+\end{ack}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\appendix
+
+\section{Prompt and Session Appendix}
+
+The full prompt/session record is preserved in \path{logs/human-intervention.md} and \path{logs/prompt-session.md}. The key human interventions were:
+
+\begin{itemize}
+  \item User selected exploration option 1: GSM8K to ASDiv-Aug versus StrategyQA transfer.
+  \item User provided access to the ISL-Shakti lab server and the \path{/data3/Aditya_Kishore369/SoftCoT} folder.
+  \item User installed the ephemeral public SSH key for Codex access.
+  \item User repeatedly asked for exact commands and status while runs were executing.
+  \item User authorized contended-GPU execution and later authorized a 30 GiB lower-memory override for seed 43.
+  \item User reported completion snippets for seed and full-target evaluations.
+  \item User asked to add diagnostic experiments: full-target evaluation and item-level agreement.
+  \item User asked Codex to draft this paper after the experiment and reviewer-pass phase.
+\end{itemize}
+
+No paid external model API prompt was issued for scientific results. Public metadata lookups were used only for citation checking. The paper itself was drafted by Codex from the logged artifacts.
+
+\section{Material Failures Preserved}
+
+\begin{itemize}
+  \item A first seed-41 run failed at Hugging Face Trainer checkpoint serialization because Qwen tied weights could not be written through the generic safetensors path.
+  \item A seed-41 evaluation resume crashed when the evaluator attempted \texttt{Instance.get} on FastNLP \texttt{Instance} rows.
+  \item StrategyQA JSONL fixed splits initially failed because the original loader expected a single JSON document.
+  \item Summary regeneration initially refused to overwrite an existing analysis directory.
+  \item Multiple SSH attempts failed because of sandbox/VPN reachability.
+  \item A local TeX compiler was not available during paper drafting; the \texttt{.tex} source is provided and a fallback PDF was generated with the bundled PDF runtime.
+\end{itemize}
+
+\section{AI Involvement Checklist}
+\label{checklist_ai_involvement}
+
+\paragraph{Hypothesis development.} \involvementC{}; iteration effort \iterationMedium{}. The human provided the original proposal; Codex sharpened it into three scoped options and recommended the chosen minimum transfer audit.
+
+\paragraph{Experimental design.} \involvementC{}; iteration effort \iterationMedium{}. Codex designed fixed splits, conditions, controls, logging, and resource guards; the human selected the scope and authorized server execution.
+
+\paragraph{Analysis.} \involvementD{}; iteration effort \iterationMedium{}. Codex aggregated raw JSON results, performed item-level agreement analysis, ran the reviewer pass, and interpreted the evidence with caveats.
+
+\paragraph{Writing.} \involvementD{}; iteration effort \iterationLow{}. Codex drafted this paper from the logged artifacts. The human critique/reflection deck is excluded by design.
+
+\paragraph{AI systems used.} Codex in the local desktop workspace; Qwen2.5 models for the actual SoftCoT training and evaluation; no paid external LLM API calls for research results.
+
+\paragraph{Observed AI limitations.} Codex needed human help for server access, live GPU status, and run authorization. It also had to correct command syntax issues, loader bugs, evaluator bugs, and paper-build limitations caused by the absence of local TeX tools.
+
+\section{Reproducibility and Responsibility Checklist}
+\label{checklist_reproducibility}
+
+\begin{itemize}
+  \item \textbf{Code available?} Yes. Code and scripts are under the selected spike directory.
+  \item \textbf{Raw results available?} Yes. Raw JSONs and logs are in frozen archives with checksums.
+  \item \textbf{Compute and cost reported?} Yes. Hardware is reported; known USD spend is US\$0.00 because compute used user-provided lab hardware with no billing receipt.
+  \item \textbf{Failures reported?} Yes. Material setup and runtime failures are preserved.
+  \item \textbf{Dataset provenance reported?} Yes. Source URLs, record counts, and checksums are logged in \path{notes/data-sources.md} and the fixed-split manifest.
+  \item \textbf{Statistical uncertainty handled?} Partially. Multiple seeds and paired item counts are reported, but the paper does not claim robust significance.
+  \item \textbf{Ethical/societal risk?} Low direct risk. The work concerns benchmark evaluation methodology, but overclaiming latent reasoning would be misleading, so limitations are emphasized.
+\end{itemize}
+
+\end{document}

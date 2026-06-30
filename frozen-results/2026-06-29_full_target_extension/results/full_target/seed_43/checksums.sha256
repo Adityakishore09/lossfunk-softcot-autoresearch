@@ -1,0 +1,5 @@
+9f8e458170d39ec2549ab37d5a31a0a6a6224afea214fd8e64366b17e1b80441  /data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/ckpt/gsm8k-source-seed-43-gsm8k-10.0-32-Qwen2.5-7B-Instruct-Qwen2.5-1.5B-Instruct/projection.bin
+dd730b577b1b2dc67dcbf9ea5dc17d18eabd5e8e1b6b38d9b0d4aa88f17103da  /data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/results/full_target/seed_43/asdiv-aug_baseline.json
+39066850653e40214583c891a6850e20e2b32c32d800f221cb180e45e7316d67  /data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/results/full_target/seed_43/asdiv-aug_learned.json
+d6210b45f2a6d9682d564eceab868b753941709fcc0fac1bf82c044d9dee2240  /data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/results/full_target/seed_43/strategyqa_baseline.json
+2c0e885613d5481121dd6da82f4fe3681617601523bac94312f79b9ecb6e1342  /data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer/results/full_target/seed_43/strategyqa_learned.json

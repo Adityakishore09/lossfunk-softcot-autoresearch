@@ -1,0 +1,6 @@
+seed=41
+batch_size=1
+min_gpu_free_mib=50000
+gpu_utilization_before_percent=99
+gpu_memory_free_before_mib=52043
+gpu_contention=contended

@@ -1,0 +1,13 @@
+seed,task,condition,accuracy,correct_count,sample_size,file
+41,strategyqa,learned,0.62882096069869,144,229,results/full_target/seed_41/strategyqa_learned.json
+41,strategyqa,baseline,0.519650655021834,119,229,results/full_target/seed_41/strategyqa_baseline.json
+41,asdiv-aug,learned,0.861271676300578,894,1038,results/full_target/seed_41/asdiv-aug_learned.json
+41,asdiv-aug,baseline,0.8901734104046243,924,1038,results/full_target/seed_41/asdiv-aug_baseline.json
+42,strategyqa,learned,0.6375545851528385,146,229,results/full_target/seed_42/strategyqa_learned.json
+42,strategyqa,baseline,0.5545851528384279,127,229,results/full_target/seed_42/strategyqa_baseline.json
+42,asdiv-aug,learned,0.8236994219653179,855,1038,results/full_target/seed_42/asdiv-aug_learned.json
+42,asdiv-aug,baseline,0.8853564547206165,919,1038,results/full_target/seed_42/asdiv-aug_baseline.json
+43,strategyqa,learned,0.6550218340611353,150,229,results/full_target/seed_43/strategyqa_learned.json
+43,strategyqa,baseline,0.5283842794759825,121,229,results/full_target/seed_43/strategyqa_baseline.json
+43,asdiv-aug,learned,0.9075144508670521,942,1038,results/full_target/seed_43/asdiv-aug_learned.json
+43,asdiv-aug,baseline,0.8574181117533719,890,1038,results/full_target/seed_43/asdiv-aug_baseline.json

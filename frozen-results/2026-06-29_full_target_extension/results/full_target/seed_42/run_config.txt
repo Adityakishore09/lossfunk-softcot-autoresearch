@@ -1,0 +1,6 @@
+seed=42
+min_gpu_free_mib=30000
+gpu_utilization_before_percent=87
+gpu_memory_free_before_mib=30832
+tasks=strategyqa asdiv-aug
+conditions=learned baseline
