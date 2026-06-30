@@ -363,3 +363,13 @@ A clean local repository-ready copy was prepared at `github-submission/lossfunk-
 ## 2026-06-30 — Server artifact audit and projection checkpoints added
 
 A read-only inventory of `/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer` showed that the server's result JSONs, logs, summary files, failure folders, scripts, and tar archives were already represented in the frozen result folders. The remaining essential server-side artifacts not yet present locally were the source-trained SoftCoT projection checkpoints for seeds 41, 42, and 43. These are small projection modules, not full model weights, and were copied into `checkpoints/softcot-projections/` with SHA-256 hashes and provenance notes. The full `models/` directory, full target data files, and server `.git` directory were intentionally not copied.
+
+## 2026-06-30 — GitHub repository pushed
+
+The user successfully pushed the prepared submission repository to GitHub:
+
+```text
+https://github.com/Adityakishore09/lossfunk-softcot-autoresearch
+```
+
+The remote branch `main` was created and set as the upstream for the local branch. The final remaining submission work is a human-authored critique/reflection deck PDF and a final manual check that the GitHub repository renders the paper, README, logs, frozen results, and checkpoints as expected.

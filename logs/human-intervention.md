@@ -440,3 +440,14 @@ The user asked for help preparing a GitHub repository for the autoresearch submi
 > Do i dont have to add the things i did in this folder of server: gaurav@ISL-Shakti:/data3/Aditya_Kishore369/lossfunk-autoresearch-runtime/gsm8k-asdiv-strategyqa-transfer, can we add the things from here as well which are essesntial for us to show
 
 The user asked whether essential artifacts from the live lab-server runtime folder should also be included in the GitHub submission. The agent performed a read-only SSH inventory of the server folder, confirmed that raw results, logs, summaries, failures, scripts, and archives were already represented through the frozen results, and identified one additional useful item: the three small source-trained SoftCoT projection checkpoints. The agent copied only those projection modules into the local artifact and did not copy the full Qwen model directories or full target datasets.
+
+## 2026-06-30 — GitHub push completion report (verbatim excerpt)
+
+> git push -u origin main
+> Enumerating objects: 228, done.
+> Writing objects: 100% (228/228), 34.02 MiB | 355.00 KiB/s, done.
+> To https://github.com/Adityakishore09/lossfunk-softcot-autoresearch.git
+>  * [new branch]      main -> main
+> branch 'main' set up to track 'origin/main'.
+
+The user reported that the prepared local submission repository was successfully pushed to GitHub at `https://github.com/Adityakishore09/lossfunk-softcot-autoresearch`. This completed the repository-publication step from the local side. No new experiment or compute was launched.

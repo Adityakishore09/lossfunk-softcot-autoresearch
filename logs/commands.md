@@ -1525,3 +1525,24 @@ git commit --amend --no-edit
 git status --short
 git log --oneline -1
 ~~~
+
+158. The user marked the local repository as safe for Git, checked status, added the GitHub remote, renamed the branch to `main`, and pushed to GitHub. The first push attempt failed due GitHub password authentication being disabled; after token/browser authentication, the push succeeded.
+
+~~~cmd
+git config --global --add safe.directory "C:/Users/Dell/OneDrive/Documents/Aditya_Kishore_Lossfunk/autovoila/github-submission/lossfunk-softcot-autoresearch"
+git status
+git remote add origin https://github.com/Adityakishore09/lossfunk-softcot-autoresearch.git
+git branch -M main
+git push -u origin main
+~~~
+
+Successful push excerpt:
+
+~~~text
+Enumerating objects: 228, done.
+Counting objects: 100% (228/228), done.
+Writing objects: 100% (228/228), 34.02 MiB | 355.00 KiB/s, done.
+To https://github.com/Adityakishore09/lossfunk-softcot-autoresearch.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+~~~

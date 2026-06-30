@@ -192,3 +192,14 @@ During the first copy, nested `.git` directories from upstream code snapshots we
 ## 2026-06-30 — First checkpoint-copy attempt timed out
 
 While adding the small server-side SoftCoT projection checkpoints to the submission artifact, the first `scp` loop timed out. Seeds 41 and 42 had already copied successfully, but `seed_43/projection.bin` was left as a zero-byte locked partial file. The stale local `scp` and its associated `ssh` process from that transfer were stopped, and seed 43 was retried successfully with a longer timeout and keepalive options. No model training, evaluation, or server-side file modification occurred.
+
+## 2026-06-30 — Initial GitHub push authentication failure
+
+The first user-run `git push -u origin main` failed because GitHub no longer supports password authentication for Git operations:
+
+~~~text
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/Adityakishore09/lossfunk-softcot-autoresearch.git/'
+~~~
+
+The suggested `git credential-manager github login` command was not supported by the installed Git Credential Manager version, which reported `Unrecognized command or argument 'github'` and `Unrecognized command or argument 'login'`. The user then completed authentication by a supported credential/token path and successfully pushed the repository. No repository content was lost.
